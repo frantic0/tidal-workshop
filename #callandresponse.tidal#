@@ -1,0 +1,50 @@
+
+-- A TidalCycles workbook
+
+-- Call and Response workshop run by Alex McLean
+
+-- Adapted from work by Lucy Cheesman, Richard Eason, and Alexandra Cardenas
+-- CC BY-SA 4.0 - https://creativecommons.org/licenses/by-sa/4.0/
+-- Suggestions and edits/patches welcome
+
+
+-- Make a sound
+
+-- Stop making a sound
+
+-- Make a different sound
+
+-- Where are these sounds coming from?
+-- In SuperCollider ..
+-- File > Open user support directory > downloaded-quarks > Dirt-Samples
+
+-- Make a step sequence
+
+-- Add rests
+
+-- Epiphany - you're changing a cycle with a fixed duration -- the
+-- longer the sequence, the faster it runs
+
+-- Play more than one cycle at once with d1 .. d9
+
+-- Change the fixed cycle duration with cps
+
+-- Pause the clock
+
+-- Silence everything (keep the clock running)
+
+-- Parameters and effects
+
+-- n
+
+-- Order matters -- patterns of sound vs patterns of n
+
+-- vowel
+
+-- gain
+
+-- speed
+
+-- accelerate
+
+-- crus

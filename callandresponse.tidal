@@ -22,5 +22,9 @@
 
 -- Add rests
 
--- Epiphany - the longer the sequence, the faster it runs
+-- Epiphany - you're changing a cycle with a fixed duration -- the
+-- longer the sequence, the faster it runs
 
+-- Change the fixed cycle duration with cps
+
+-- 

@@ -27,4 +27,5 @@
 
 -- Change the fixed cycle duration with cps
 
--- 
+-- Play more than one cycle at once with d1 .. d9
+

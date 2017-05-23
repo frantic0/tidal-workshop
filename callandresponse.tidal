@@ -25,8 +25,8 @@
 -- Epiphany - you're changing a cycle with a fixed duration -- the
 -- longer the sequence, the faster it runs
 
--- Change the fixed cycle duration with cps
-
 -- Play more than one cycle at once with d1 .. d9
+
+-- Change the fixed cycle duration with cps
 
 -- Pause everything

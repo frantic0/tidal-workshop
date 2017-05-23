@@ -29,6 +29,6 @@
 
 -- Change the fixed cycle duration with cps
 
--- Pause everything
+-- Pause the clock
 
--- Silence everything
+-- Silence everything (keep the clock running)

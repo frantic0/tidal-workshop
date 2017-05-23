@@ -35,20 +35,23 @@
 
 -- Parameters and effects
 
--- n
+-- * n
 
 -- Order matters -- patterns of sound vs patterns of n
 
--- vowel
+-- * vowel
 
--- gain
+-- * gain
 
--- speed
+-- Continuous patterns - sine, saw, tri, rand
 
--- accelerate
+-- * speed
 
--- crush
+-- * accelerate
 
--- lpf
+-- * crush
 
--- lpq
+-- * lpf / lpq
+
+-- * hpf / hpq
+

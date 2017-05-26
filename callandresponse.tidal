@@ -13,7 +13,11 @@ d1 $ sound "bd"
 
 -- Stop making a sound
 
+d1 $ silence
+
 -- Make a different sound
+
+d1 $ sound "cp"
 
 -- Where are these sounds coming from?
 -- In SuperCollider ..

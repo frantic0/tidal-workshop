@@ -84,10 +84,15 @@ d2 $ sound "~ ht"
 -- * sometimes / rarely / often
 -- * iter
 
+-- Composing
+
+-- * seqP / seqPLoop
+-- * ur'
+
 -- Synths
 
 -- * sc-plugins
 
 -- Midi
 
--- 
+

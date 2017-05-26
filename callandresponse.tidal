@@ -34,11 +34,15 @@ d1 $ sound "bd ~ sn:2 ~ ~ bd sn:2 ~"
 -- You're changing a cycle with a fixed duration -- the longer the
 -- sequence, the faster it runs
 
+d1 $ sound "bd ~ sn:2 ~ ~ bd sn:2 ~ bd bd bd bd bd bd bd bd"
+
 -- Play more than one cycle at once with d1 .. d9
 
-d2 $ sound "~ ht"
+d2 $ sound "~ arpy:3"
 
 -- Change the fixed cycle duration with cps
+
+cps 0.8
 
 -- Pause the clock
 
@@ -48,9 +52,11 @@ cps (-1)
 
 hush
 
--- Sample number as a separate parameter
+-- Sample number as a separate parameter with n
 
--- * n
+-- * these are the same
+
+d1 $ sound "arpy:0 arpy:1 arpy:2 arpy:3"
 
 d1 $ sound "arpy*4" # n "0 1 2 3"
 
@@ -61,27 +67,92 @@ d1 $ n "0 1 2 3" # sound "arpy"
 
 -- Combining with |+|, |*| etc instead of #
 
+-- * # replaces
 
+d1 $ n "0 1 2 3" # sound "arpy"
+  # n "4"
 
--- How things align
+-- * but |+| adds
+
+d1 $ n "0 1 2 3" # sound "arpy"
+  |+| n "0 7"
+
+-- * a preview of slow..
+
+d1 $ n "0 1 2 3" # sound "arpy"
+  |+| n (slow 2 "0 7")
 
 -- More parameters
 
 -- * vowel
 
+d1 $ vowel "a e i o" # sound "arpy"
+
 -- * gain
 
--- * nudge
+d1 $ gain "1 0.5 1 0.75" # sound "arpy"
 
--- Continuous patterns - sine, saw, tri, rand / choose
+-- * crush - bitcrush distortion
+
+d1 $ crush "3 4 5 6 7 8" # sound "arpy"
+
+
+-- How things align - the start of events in the pattern on the left are matched with the timespan on the right
+
+d1 $ sound "drum drum arpy arpy"
+  # n "0 1 4 3"
+
+d1 $ sound "drum drum drum arpy arpy"
+  # n "0 1 4 3"
+
+d1 $ sound "drum drum arpy arpy"
+  # n "0 1 4"
 
 -- * speed / up
 
+d1 $ sound "drum drum arpy arpy"
+  # speed "1 0.5 2"
+
+-- Continuous patterns - sine, saw, tri, rand / choose
+
+-- * sine
+
+d1 $ sound "drum drum drum drum drum drum drum drum"
+  # gain (sine + 0.25)
+
+-- * this doesn't work!
+
+d1 $ sound "drum drum drum drum drum drum drum drum"
+  # gain (0.25 + sine)
+
+-- * rand
+
+d1 $ sound "drum drum drum drum drum drum drum drum"
+  # gain (rand + 0.25)
+
+-- * choose
+
+d1 $ sound "drum drum drum drum drum drum drum drum"
+  # speed (choose [0.5, 2, 4])
+
+-- More parameters
+
 -- * accelerate
 
--- * crush
+d1 $ sound "drum drum arpy arpy"
+  # accelerate "1 0.5 2"
 
 -- * lpf / lpq
+
+d1 $ sound "drum drum arpy arpy"
+  # lpf 1000
+  # lpq 0.3
+
+-- (double quotes aren't strictly necessary for single numbers)
+
+d1 $ sound "drum ~ drum drum:2 arpy ~ arpy:3 ~"
+  # lpf (sine * 4000 + 500)
+  # lpq (slow 4 (sine * 0.3))
 
 -- * hpf / hpq
 
@@ -101,7 +172,7 @@ d1 $ sound "[[bd bd] bd sn:5] [bd sn:3]"
 -- * Keep going..
 d1 $ sound "[[bd [bd bd bd bd]] bd sn:5] [bd sn:3]"
 
--- * Polymetric / polyrhythmic sequences
+-- Polymetric / polyrhythmic sequences
 
 -- * Play two subsequences at once by separating with a comma:
 

@@ -62,3 +62,13 @@
 -- * one per cycle
 -- * elongation
 
+-- Transformations
+
+-- * rev
+-- * fast (density)
+-- * slow (sparsity)
+-- * every
+-- * chop
+-- * sometimes / rarely / often
+-- * iter
+

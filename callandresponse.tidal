@@ -55,6 +55,8 @@ d1 $ sound "arpy*4" # n "0 1 2 3"
 
 d1 $ n "0 1 2 3" # sound "arpy"
 
+-- Combining with |+|, |*| etc
+
 -- * vowel
 
 -- * gain
@@ -88,8 +90,6 @@ d1 $ n "0 1 2 3" # sound "arpy"
 -- * chop
 -- * sometimes / rarely / often
 -- * iter
-
--- Combining with |+|, |*| etc
 
 -- Transitions
 

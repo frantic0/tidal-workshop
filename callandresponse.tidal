@@ -57,6 +57,8 @@ d1 $ n "0 1 2 3" # sound "arpy"
 
 -- Combining with |+|, |*| etc instead of #
 
+-- How things align
+
 -- * vowel
 
 -- * gain

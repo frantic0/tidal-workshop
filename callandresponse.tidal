@@ -29,6 +29,8 @@ d1 $ sound "bd mt cp lt"
 
 -- Add rests
 
+d1 $ sound "bd ~ sn:2 ~ ~ bd sn:2 ~"
+
 -- Epiphany - you're changing a cycle with a fixed duration -- the
 -- longer the sequence, the faster it runs
 

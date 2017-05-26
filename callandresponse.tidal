@@ -155,6 +155,7 @@ d1 $ sound "bd*4 cp*3 arpy/2"
 
 -- Composing
 
+-- * stack
 -- * seqP / seqPLoop
 -- * ur'
 

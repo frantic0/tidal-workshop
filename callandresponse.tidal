@@ -36,7 +36,7 @@ d1 $ sound "bd ~ sn:2 ~ ~ bd sn:2 ~"
 
 -- Play more than one cycle at once with d1 .. d9
 
-d2 $ sound "~ off"
+d2 $ sound "~ ht"
 
 -- Change the fixed cycle duration with cps
 

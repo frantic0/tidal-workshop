@@ -142,6 +142,7 @@ d1 $ sound "bd*4 cp*3 arpy/2"
 -- * iter
 -- * linger
 -- * degrade / degradeBy
+-- * stut
 
 -- Patterning parameters - directly and with spread
 

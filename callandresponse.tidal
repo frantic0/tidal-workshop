@@ -9,7 +9,7 @@
 
 -- Make a sound
 
-d1 $ sound "bd"
+d1 $ sound "arpy"
 
 -- Stop making a sound
 
@@ -17,7 +17,7 @@ d1 $ silence
 
 -- Make a different sound
 
-d1 $ sound "cp"
+d1 $ sound "arpy:1"
 
 -- Where are these sounds coming from?
 -- In SuperCollider ..

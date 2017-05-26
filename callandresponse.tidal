@@ -42,7 +42,11 @@ d2 $ sound "~ ht"
 
 -- Pause the clock
 
+cps (-1)
+
 -- Silence everything (keep the clock running)
+
+hush
 
 -- Sample number as a separate parameter
 

@@ -140,6 +140,7 @@ d1 $ sound "bd*4 cp*3 arpy/2"
 -- * chop / striate
 -- * iter
 -- * linger
+-- * degrade / degradeBy
 
 -- Transitions
 

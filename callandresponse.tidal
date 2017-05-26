@@ -48,6 +48,8 @@ d2 $ sound "~ ht"
 
 -- * n
 
+d1 $ sound "arpy*4" # n "0 1 2 3"
+
 -- Order matters -- patterns of sound vs patterns of n
 
 -- * vowel
@@ -83,6 +85,8 @@ d2 $ sound "~ ht"
 -- * chop
 -- * sometimes / rarely / often
 -- * iter
+
+-- Transitions
 
 -- Composing
 

@@ -25,6 +25,8 @@ d1 $ sound "cp"
 
 -- Make a step sequence
 
+d1 $ sound "bd mt cp lt"
+
 -- Add rests
 
 -- Epiphany - you're changing a cycle with a fixed duration -- the

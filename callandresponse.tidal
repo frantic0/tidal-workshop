@@ -61,7 +61,7 @@ d1 $ n "0 1 2 3" # sound "arpy"
 
 -- Continuous patterns - sine, saw, tri, rand
 
--- * speed
+-- * speed / up
 
 -- * accelerate
 
@@ -88,6 +88,10 @@ d1 $ n "0 1 2 3" # sound "arpy"
 -- * chop
 -- * sometimes / rarely / often
 -- * iter
+
+-- Combining with |+|, |*| etc
+
+
 
 -- Transitions
 

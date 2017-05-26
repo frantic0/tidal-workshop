@@ -72,6 +72,7 @@ d2 $ sound "~ ht"
 -- * polymeter
 -- * one per cycle
 -- * elongation
+-- * speed up / down
 
 -- Transformations
 

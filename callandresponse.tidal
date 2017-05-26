@@ -44,7 +44,7 @@ d2 $ sound "~ ht"
 
 -- Silence everything (keep the clock running)
 
--- Parameters and effects
+-- Sample number as a separate parameter
 
 -- * n
 
@@ -59,9 +59,13 @@ d1 $ n "0 1 2 3" # sound "arpy"
 
 -- How things align
 
+-- More parameters
+
 -- * vowel
 
 -- * gain
+
+-- * 
 
 -- Continuous patterns - sine, saw, tri, rand / choose
 

@@ -52,6 +52,8 @@ d1 $ sound "arpy*4" # n "0 1 2 3"
 
 -- Order matters -- patterns of sound vs patterns of n
 
+d1 $ n "0 1 2 3" # sound "arpy"
+
 -- * vowel
 
 -- * gain

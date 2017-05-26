@@ -132,6 +132,7 @@ d1 $ sound "bd*4 cp*3 arpy/2"
 
 -- * every
 -- * sometimes / rarely / often
+-- * someCycles
 -- * jux
 
 -- More transformations

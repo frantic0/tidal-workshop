@@ -144,6 +144,7 @@ d1 $ sound "bd*4 cp*3 arpy/2"
 -- * linger
 -- * degrade / degradeBy
 -- * stut
+-- * weave
 
 -- Patterning parameters - directly and with spread
 

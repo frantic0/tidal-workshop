@@ -134,8 +134,10 @@ d1 $ sound "bd*4 cp*3 arpy/2"
 -- * sometimes / rarely / often
 -- * jux
 
--- * chop
+-- More transformations
+
 -- * rev
+-- * chop / striate
 -- * iter
 -- * linger
 

@@ -143,7 +143,7 @@ d1 $ sound "bd*4 cp*3 arpy/2"
 -- * linger
 -- * degrade / degradeBy
 
--- Patterning (some) parameters
+-- Patterning parameters - directly and with spread
 
 -- Transitions
 

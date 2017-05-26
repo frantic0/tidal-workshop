@@ -63,7 +63,7 @@ d1 $ n "0 1 2 3" # sound "arpy"
 
 -- * gain
 
--- Continuous patterns - sine, saw, tri, rand
+-- Continuous patterns - sine, saw, tri, rand, choose
 
 -- * speed / up
 

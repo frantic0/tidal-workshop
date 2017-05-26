@@ -115,7 +115,9 @@ d1 $ sound "{bd sn, can:2 can:3 can:1, arpy arpy:1 arpy:2 arpy:3 arpy:5}"
 
 d1 $ sound "cp <arpy:1 arpy:2 arpy:3>"
 
--- * elongation
+-- * elongation with _
+
+d1 $ sound "[bd mt ht] _ [bd mt ht]"
 
 -- * faster with *, slower with /
 

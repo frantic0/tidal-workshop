@@ -137,6 +137,7 @@ d1 $ sound "bd*4 cp*3 arpy/2"
 -- More transformations
 
 -- * rev
+-- * beat rotation with <~ and ~>
 -- * chop / striate
 -- * iter
 -- * linger

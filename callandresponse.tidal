@@ -65,7 +65,7 @@ d1 $ n "0 1 2 3" # sound "arpy"
 
 -- * gain
 
--- * 
+-- * nudge
 
 -- Continuous patterns - sine, saw, tri, rand / choose
 
@@ -126,6 +126,8 @@ d1 $ sound "[bd mt ht] _ [bd mt ht]"
 -- * faster with *, slower with /
 
 d1 $ sound "bd*4 cp*3 arpy/2"
+
+-- * Euclidian patterns
 
 -- Transformations A
 

@@ -1,0 +1,171 @@
+
+-- A TidalCycles workbook
+
+-- Call and Response workshop run by Alex McLean
+
+-- Adapted from work by Lucy Cheesman, Richard Eason, and Alexandra Cardenas
+-- CC BY-SA 4.0 - https://creativecommons.org/licenses/by-sa/4.0/
+-- Suggestions and edits/patches welcome
+
+-- Make a sound
+
+d1 $ sound "arpy"
+
+-- Stop making a sound
+
+d1 $ silence
+
+-- Make a different sound
+
+d1 $ sound "arpy:1"
+
+-- Where are these sounds coming from?
+-- In SuperCollider ..
+-- File > Open user support directory > downloaded-quarks > Dirt-Samples
+
+-- Make a step sequence
+
+d1 $ sound "bd mt cp lt"
+
+-- Add rests
+
+d1 $ sound "bd ~ sn:2 ~ ~ bd sn:2 ~"
+
+-- You're changing a cycle with a fixed duration -- the longer the
+-- sequence, the faster it runs
+
+-- Play more than one cycle at once with d1 .. d9
+
+d2 $ sound "~ ht"
+
+-- Change the fixed cycle duration with cps
+
+-- Pause the clock
+
+-- Silence everything (keep the clock running)
+
+-- Parameters and effects
+
+-- * n
+
+d1 $ sound "arpy*4" # n "0 1 2 3"
+
+-- Order matters -- patterns of sound vs patterns of n.
+-- e.g. you don't need the *4 on the above if you put n first
+
+d1 $ n "0 1 2 3" # sound "arpy"
+
+-- Combining with |+|, |*| etc instead of #
+
+-- How things align
+
+-- * vowel
+
+-- * gain
+
+-- 
+
+-- Continuous patterns - sine, saw, tri, rand / choose
+
+-- * speed / up
+
+-- * accelerate
+
+-- * crush
+
+-- * lpf / lpq
+
+-- * hpf / hpq
+
+-- Subpatterns
+
+-- * Fit a subsequence into a step with square brackets:
+
+d1 $ sound "bd [bd cp] bd bd"
+
+-- * This can make for flexible time signatures:
+
+d1 $ sound "[bd bd sn:5] [bd sn:3]"
+
+-- * You can put subsequences inside subsequences:
+d1 $ sound "[[bd bd] bd sn:5] [bd sn:3]"
+
+-- * Keep going..
+d1 $ sound "[[bd [bd bd bd bd]] bd sn:5] [bd sn:3]"
+
+-- * Polymetric / polyrhythmic sequences
+
+-- * Play two subsequences at once by separating with a comma:
+
+d1 $ sound "[voodoo voodoo:3, arpy arpy:4 arpy:2]"
+
+-- * compare how [,] and {,} work:
+
+d1 $ sound "[voodoo voodoo:3, arpy arpy:4 arpy:2]"
+
+d1 $ sound "{voodoo voodoo:3, arpy arpy:4 arpy:2}"
+
+d1 $ sound "[drum bd hh bd, can can:2 can:3 can:4 can:2]"
+
+d1 $ sound "{drum bd hh bd, can can:2 can:3 can:4 can:2}"
+
+d1 $ sound "[bd sn, can:2 can:3 can:1, arpy arpy:1 arpy:2 arpy:3 arpy:5]"
+
+d1 $ sound "{bd sn, can:2 can:3 can:1, arpy arpy:1 arpy:2 arpy:3 arpy:5}"
+
+-- * one per cycle with <>
+
+d1 $ sound "cp <arpy:1 arpy:2 arpy:3>"
+
+-- * elongation with _
+
+d1 $ sound "[bd mt ht] _ [bd mt ht]"
+
+-- * faster with *, slower with /
+
+d1 $ sound "bd*4 cp*3 arpy/2"
+
+-- Transformations A
+
+-- * fast (density)
+-- * slow (sparsity)
+
+-- 'Higher order' transformations that take another transoformation
+
+-- * every
+-- * sometimes / rarely / often
+-- * someCycles
+-- * jux
+
+-- More transformations
+
+-- * rev
+-- * beat rotation with <~ and ~>
+-- * chop / striate
+-- * iter
+-- * linger
+-- * degrade / degradeBy
+-- * stut
+-- * weave
+
+-- Patterning parameters - directly and with spread
+
+-- Transitions
+
+-- * anticipate
+-- * xfade
+-- * ...
+
+-- Composing
+
+-- * stack
+-- * seqP / seqPLoop
+-- * ur'
+
+-- Synths
+
+-- * sc-plugins
+
+-- Midi
+
+-- Multichannel and multitrack

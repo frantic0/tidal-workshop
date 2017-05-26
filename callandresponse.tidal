@@ -9,6 +9,8 @@
 
 -- Make a sound
 
+d1 $ sound "bd"
+
 -- Stop making a sound
 
 -- Make a different sound

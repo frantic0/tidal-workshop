@@ -31,8 +31,8 @@ d1 $ sound "bd mt cp lt"
 
 d1 $ sound "bd ~ sn:2 ~ ~ bd sn:2 ~"
 
--- Epiphany - you're changing a cycle with a fixed duration -- the
--- longer the sequence, the faster it runs
+-- You're changing a cycle with a fixed duration -- the longer the
+-- sequence, the faster it runs
 
 -- Play more than one cycle at once with d1 .. d9
 

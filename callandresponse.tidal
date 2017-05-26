@@ -121,6 +121,8 @@ d1 $ sound "[bd mt ht] _ [bd mt ht]"
 
 -- * faster with *, slower with /
 
+d1 $ sound "bd*4 cp*3 arpy/2"
+
 -- Transformations
 
 -- * rev

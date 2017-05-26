@@ -123,14 +123,19 @@ d1 $ sound "[bd mt ht] _ [bd mt ht]"
 
 d1 $ sound "bd*4 cp*3 arpy/2"
 
--- Transformations
+-- Transformations A
 
--- * rev
 -- * fast (density)
 -- * slow (sparsity)
+
+-- 'Higher order' transformations that take another transoformation
+
 -- * every
--- * chop
 -- * sometimes / rarely / often
+-- * jux
+
+-- * chop
+-- * rev
 -- * iter
 -- * linger
 

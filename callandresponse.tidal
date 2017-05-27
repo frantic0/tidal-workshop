@@ -446,10 +446,10 @@ d1 $ jux rev $ loopAt 1 $ striate "8" $ sound "arpy <arpy:9 arpy:6>"
 d1 $ chunk 4 (0.25 <~) $ sound "bd sn:2 mt ~ ht lt cp lt"
   # speed 1.5
 
-d1 $ off "<0.25 0 0.5>" (# s "bottle") $ jux rev $ (chunk 4 (fast 2 . (# speed 2)) $ chop 16 $ sound "can:7*2")
-  # hpf 6000
+d1 $ off "<0.25 0 0.5>" (# s "supermandolin") $ jux rev $ (chunk 4 (fast 2 . (# speed 2)) $sound "superpiano*4")
+  # bpf 6000
   # hpq 0.2
-  |+| n "<0 1 2 3>"
+  |+| n "<0 2 12 3>"
 
 
 

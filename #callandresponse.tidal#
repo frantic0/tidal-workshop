@@ -179,7 +179,11 @@ d1 $ sound "drum ~ drum drum:2 arpy ~ arpy:3 ~"
 
 d1 $ slow 2 $ sound "bd [bd [bd cp] arpy] bd bd"
 
-d1 $ sound "[bd ]"
+cps 0.5
+
+d1 $ desound "bd [cp? lt] [~ bd]"
+
+d2 $ sound "arpy [arpy arpy:2]"
 
 -- * This can make for flexible time signatures:
 

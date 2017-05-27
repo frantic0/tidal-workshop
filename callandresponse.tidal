@@ -471,13 +471,10 @@ degrade $ jux rev $ slow 4 $ off 0.125 (# crush 5) $ every 2 (gap 16) $ sound "<
   # speed "[1,1.01]"
   |*| up "<0 [5 7] 12>"
 
-
 d1 $ cat [sound "bd sn*4",
           sound "arpy(3,8)"
          ]
   # speed 2
-
-
 
 d1 $ "<0 0.25 0.5>" <~ (sound "bd sn:2 mt ~ ht lt cp lt")
 

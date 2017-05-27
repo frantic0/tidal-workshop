@@ -70,12 +70,14 @@ hush
 
 d1 $ sound "arpy:0 arpy:1 arpy:2 arpy:3"
 
-d1 $ sound "arpy*4" # n "0 1 2 3"
+d1 $ sound "arpy" # n "0 1 2 3"
 
 -- Order matters -- patterns of sound vs patterns of n.
 -- e.g. you don't need the *4 on the above if you put n first
 
-d1 $ n "0 1 2 3" # sound "arpy"
+d1 $ n "0 ~ 1 ~ 2 ~ 3" # sound "arpy"
+
+
 
 -- Combining with |+|, |*| etc instead of #
 

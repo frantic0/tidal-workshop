@@ -206,7 +206,7 @@ d1 $ sound "[voodoo voodoo:3 [voodoo:2 voodoo:8] voodoo:1, arpy arpy:4 arpy:2]"
 
 d1 $ sound "~ [sn mt, arpy:2 arpy:4 arpy] ~"
 
-v $ "[red blue, [green tomato] orange grey]"
+v $ "yellow [red blue, [green [tomato black] purple] orange grey] lightblue"
 
 cps 0.5
 

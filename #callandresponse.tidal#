@@ -20,7 +20,9 @@ https://github.com/yaxu/tidal-workshop
 d1 $ crush "6 4 3 5*2 1 3 2 4" # sound "arpy"
   # vowel "a i o"
 
-d2 $ sound "bd [sn sn:2, arpy*] cp sn:2"
+d2 $ sound "bd [sn sn:2, arpy*3] [cp off newnotes newnotes:3]/1.5 sn:2"
+
+v (fast 12 "red blue [orange purple tomato]/1.52322 grey")
 
 -- Stop making a sound
 

@@ -25,7 +25,7 @@ d1 $ silence
 
 -- Make a different sound
 
-d1 $ sound "arpy:1"
+d1 $ sound "drum:1"
 
 -- Where are these sounds coming from?
 -- In SuperCollider ..

@@ -81,7 +81,10 @@ d1 $ n "0 1 2 3" # sound "arpy drum"
 
 -- * # replaces
 
-d1 $ n "0 1 2 3" # sound "arpy"
+d1 $ n "0 1 2 3" |=| sound "arpy"
+
+d1 $ speed "1 2 1.5 0.5" # sound "arpy"
+
 
 
 -- * but |+| adds

@@ -1,0 +1,461 @@
+
+10:30
+12:30 lunch
+17:00
+
+https://github.com/yaxu/tidal-workshop
+
+
+
+-- A TidalCycles workbook
+
+-- Call and Response workshop run by Alex McLean
+
+-- Adapted from work by Lucy Cheesman, Richard Eason, and Alexandra Cardenas
+-- CC BY-SA 4.0 - https://creativecommons.org/licenses/by-sa/4.0/
+-- Suggestions and edits/patches welcome
+
+-- Make a sound
+
+d1 $ crush "6 4 3 5*2 1 3 2 4" # sound "arpy"
+  # vowel "a i o"
+
+d2 $ sound "bd [sn sn:2, arpy*3] [cp off newnotes newnotes:3]/1.5 sn:2"
+
+d3 $ sound "{sn sn:2*2 cp, arpy arpy:2}"
+
+d1 $ (pure now) <~ (do {x <- slow (12 * 12) $ run  12; jux ((pure $ x/12) <~) $ sound "cp ! ! ~ cp ! ~ cp ~ cp ! ~"})
+
+
+now
+
+cps (1)
+
+hush
+-- Stop making a sound
+
+v $ fast 4 "{orange grey purple, blue red}"
+
+d1 $ silence
+
+-- Make a different sound
+
+d1 $ sound "drum:1"
+
+-- Where are these sounds coming from?
+-- In SuperCollider ..
+-- File > Open user support directory > downloaded-quarks > Dirt-Samples
+
+-- Make a step sequence
+
+cps 0.8
+
+d1 $ sound "bd mt cp lt bd bd bd bd"
+
+d2 $ sound "arpy arpy arpy"
+d1 silence
+-- Add rests
+
+d1 $ sound "bd ~ sn:2 ~ ~ bd sn:2 ~"
+
+-- You're changing a cycle with a fixed duration -- the longer the
+-- sequence, the faster it runs
+
+d1 $ sound "bd ~ sn:2 ~ ~ bd sn:2 ~ bd bd bd bd bd bd bd bd"
+
+-- Play more than one cycle at once with d1 .. d9
+
+d2 $ sound "~ arpy:3"
+
+-- Change the fixed cycle duration with cps
+
+cps (120/60)
+
+-- Pause the clock
+
+cps (-1)
+
+-- Silence everything (keep the clock running)
+
+hush
+
+-- Sample number as a separate parameter with n
+
+-- * these are the same
+
+d1 $ sound "arpy:0 arpy:1 arpy:2 arpy:3"
+
+d1 $ sound "arpy" # n "0 1 2 3"
+
+-- Order matters -- patterns of sound vs patterns of n.
+-- e.g. you don't need the *4 on the above if you put n first
+
+d1 $ n "0 1 2 3" # sound "arpy drum"
+
+-- Combining with |+|, |*| etc instead of #
+
+-- * # replaces
+
+d1 $ n "0 1 2 3" |=| sound "arpy"
+
+d1 $ speed "0 0 0 0" # sound "arpy"
+  # speed (slow 4 sine)
+
+-- * but |+| adds
+
+d1 $ n "0 1 2 3" # sound "arpy"
+  |+| n "0 7"
+
+-- * a preview of slow..
+
+d1 $ n "0 1 2 3" # sound "arpy"
+  |+| n (slow 2 "0 7")
+
+-- More parameters
+
+d1 $ sound "bd sn"
+  # n "1 2 3"
+
+-- * vowel
+
+d1 $ vowel "a e i o" # sound "arpy"
+
+-- * gain
+
+d1 $ gain "1 0.5 1 0.75" # sound "arpy"
+
+-- * crush - bitcrush distortion
+
+d1 $ (fast 0.5 (crush ("3 4 5 6 7 8"))) # sound "arpy"
+
+-- How things align - the start of events in the pattern on the left are matched with the timespan on the right
+
+d1 $ sound "drum drum arpy arpy"
+  # n "0 1 4 3"
+
+d1 $ sound "drum drum drum arpy arpy"
+  # n "0 1 4 3"
+
+d1 $ sound "drum drum arpy arpy"
+  # n "0 1 4"
+
+-- * speed / up
+
+d1 $ sound "drum drum arpy arpy"
+  # speed "1 0.5 2"
+
+-- Continuous patterns - sine, saw, tri, rand / choose
+
+-- * sine
+
+d1 $ sound "drum drum drum drum drum drum drum drum"
+  # gain (fast 2 (sine + 0.5))
+  # bpf 1000
+  # bpq 1
+
+
+
+hush
+
+scale a b p
+slow a p
+
+-- * this doesn't work!
+
+d1 $ sound "drum drum drum drum drum drum drum drum"
+  # gain (0.25 + sine)
+
+-- * rand
+
+d1 $ sound "drum drum drum drum drum drum drum drum"
+  # gain (rand + 0.25)
+
+-- * choose
+
+d1 $ sound "drum drum drum drum drum drum drum drum"
+  # speed (choose [0.5, 2, 4])
+
+-- More parameters
+
+-- * accelerate
+
+d1 $ sound "drum drum arpy arpy"
+  # accelerate "1 0.5 2"
+
+-- * lpf / lpq
+
+d1 $ sound "drum drum arpy arpy"
+  # lpf 1000
+  # lpq 0.3
+
+-- (double quotes aren't strictly necessary for single numbers)
+
+d1 $ sound "drum ~ drum drum:2 arpy ~ arpy:3 ~"
+  # lpf (sine * 4000 + 500)
+  # lpq (slow 4 (sine * 0.3))
+
+-- * hpf / hpq
+
+-- Subpatterns
+
+-- * Fit a subsequence into a step with square brackets:
+
+d1 $ slow 2 $ sound "bd [bd [bd cp] arpy] bd bd"
+
+cps 0.5
+
+d1 $ sound "bd? [cp? lt?] [~ bd?]"
+
+d2 $ sound "arpy [arpy arpy:2]"
+
+-- * This can make for flexible time signatures:
+
+d1 $ sound "[bd bd sn:5] [bd sn:3]"
+
+-- * You can put subsequences inside subsequences:
+d1 $ sound "[[bd bd] bd sn:5] [bd sn:3]"
+
+-- * Keep going..
+d1 $ sound "[[bd [bd bd bd bd]] bd sn:5] [bd sn:3]"
+
+-- Polymetric / polyrhythmic sequences
+
+-- * Play two subsequences at once by separating with a comma:
+
+
+
+d1 $ sound "[voodoo voodoo:3 [voodoo:2 voodoo:8] voodoo:1, arpy arpy:4 arpy:2]"
+  # crush "3 4"
+
+d1 $ sound "~ [sn mt, arpy:2 arpy:4 arpy] ~"
+
+v $ "yellow [red blue, [green [tomato black] purple] orange grey] lightblue"
+
+  cps 0.5
+
+cps (-1)
+
+
+http://192.168.1.77/edit.html
+
+
+d1 $ up "0 7 12" # sound "arpy"
+
+voodoo    voodooo:3
+arpy   arpy:4   arpy:2
+
+-- * compare how [,] and {,} work:
+
+d1 $ jux rev $ sound "{drum drum:2 [~ mt] bd*3, arpy:1 [~ arpy:2] arpy:1}"
+  # gain 1.2
+
+d1 $ jux rev $ chop "<32 64 8>" $ sound "bd sn:2"
+  # gain 1.1
+
+
+d1 $ jux rev $ loopAt 8 $ chop "<32 64>" $
+
+d1 $ jux rev $ loopAt "<16 8 4>" $ chop 16 $  sound "bev"
+
+
+
+d1 $ sound "{voodoo voodoo:3, arpy arpy:4 arpy:2}"
+
+d1 $ sound "[drum bd hh bd, can can:2 can:3 can:4 can:2]"
+
+d1 $ sound "{drum bd hh bd, can can:2 can:3 can:4 can:2}"
+
+d1 $ sound "[bd sn, can:2 can:3 can:1, arpy arpy:1 arpy:2 arpy:3 arpy:5]"
+
+d1 $ sound "{bd sn, can:2 can:3 can:1, arpy arpy:1 arpy:2 arpy:3 arpy:5}"
+
+-- * one per cycle with <>
+
+d1 $ sound "cp <arpy:1 arpy:2 arpy:3>"
+
+-- * elongation with _
+
+d1 $ sound "[bd mt ht] _ [bd mt ht]"
+
+-- * faster with *, slower with /
+
+d1 $ sound "bd*4 cp*3 arpy/2"
+
+-- * Euclidian patterns
+
+d1 $ sound "bd(<3 5>,8)"
+  # gain 1.4
+
+d1 $ sound "[bd sn:2 arpy]/2 [sn:4 bd]"
+  # gain 1.3
+
+d2 $ sound "[bd sn] [sn:1 bd sn] _"
+  # gain 1.3
+
+v $ "[red blue green] [orange purple black] _"
+
+d1 $ jux rev $ off 0.25 (|+| n "12") $ off (1/8) (|+| n "7")
+  $ slow 2 $ n "c(3,8) e(3,8) g(3,8) f5" # sound "superpiano"
+  # legato 4
+
+d1 $ jux rev $
+  n (off 0.125 (+12) $ off 0.125 (+ 7) $ slow 2 $ "c7(3,8) a7*2 f7(3,8) e7(3,8,2)") # sound "rash"
+
+hush
+
+-- ** (2,5) : A thirteenth century Persian rhythm called Khafif-e-ramal.
+-- ** (3,4) : The archetypal pattern of the Cumbia from Colombia, as well as a Calypso rhythm from Trinidad.
+-- ** (3,5,2) : Another thirteenth century Persian rhythm by the name of Khafif-e-ramal, as well as a Rumanian folk-dance rhythm.
+-- ** (3,7) : A Ruchenitza rhythm used in a Bulgarian folk-dance.
+-- ** (3,8) : The Cuban tresillo pattern.
+-- ** (4,7) : Another Ruchenitza Bulgarian folk-dance rhythm.
+-- ** (4,9) : The Aksak rhythm of Turkey.
+-- ** (4,11) : The metric pattern used by Frank Zappa in his piece titled Outside Now.
+-- ** (5,6) : Yields the York-Samai pattern, a popular Arab rhythm.
+-- ** (5,7) : The Nawakhat pattern, another popular Arab rhythm.
+-- ** (5,8) : The Cuban cinquillo pattern.
+-- ** (5,9) : A popular Arab rhythm called Agsag-Samai.
+-- ** (5,11) : The metric pattern used by Moussorgsky in Pictures at an Exhibition.
+-- ** (5,12) : The Venda clapping pattern of a South African children’s song.
+-- ** (5,16) : The Bossa-Nova rhythm necklace of Brazil.
+-- ** (7,8) : A typical rhythm played on the Bendir (frame drum).
+-- ** (7,12) : A common West African bell pattern.
+-- ** -- ** (7,16,14) : A Samba rhythm necklace from Brazil.
+-- ** (9,16) : A rhythm necklace used in the Central African Republic.
+-- ** (11,24,14) : A rhythm necklace of the Aka Pygmies of Central Africa.
+-- ** (13,24,5) : Another rhythm necklace of the Aka Pygmies of the upper Sangha.
+
+-- Transformations A
+
+-- * fast (density)
+-- * slow (sparsity)
+
+-- 'Higher order' transformations that take another transoformation
+
+-- * every
+-- * sometimes / rarely / often
+-- * someCycles
+-- * jux
+
+
+d1 $ every 4 (fast 2) $ sound "bd [~ lt] <ht bd> lt:3"
+
+d1 $ every 4 (0.25 <~) (sound "bd [~ lt] <ht bd> lt:3")
+
+d1 $ every 3 (0.125 <~) $ every 4 (0.25 <~) (sound "bd [~ lt] <ht bd> lt:3")
+
+d1 $ jux rev $ every 4 (chop 4) $ every 3 (# speed "2") (sound "bd [~ lt] <ht bd> lt:3")
+
+d1 $ sometimes (# crush 2) (sound "bd sn cp sn:2")
+
+
+d1 $ someCycles (crush "2 4*3" #) (sound "bd sn cp sn:2")
+
+d1 $ every 3 (crush "2 4*3" #) (sound "bd sn cp sn:2")
+
+d1 $ someCycles (fast 2) (sound "bd sn cp sn:2")
+
+d1 $ gap 4 $ slow 2 $ n "c5(3,8) ~ a5 ~" # sound "superzow"
+   # orbit 2
+   # gain 0.9
+   # lpf 400
+
+d1 $ jux ((# speed 0.5) . fast 3) $ sound "bd sn"
+
+d2 $ every 3 ((|*| speed 0.5) . fast 0.5)
+  $ loopAt 2 $ chop 8 $ sound "breaks165"
+
+
+-- More transformations
+
+-- * rev
+-- * beat rotation with <~ and ~>
+-- * chop / striate
+-- * iter
+-- * linger
+-- * degrade / degradeBy
+-- * stut
+-- * weave
+
+-- Patterning parameters - directly and with spread
+
+-- Transitions
+
+-- * anticipate
+-- * xfade
+-- * ...
+
+-- Composing
+
+-- * stack
+-- * seqP / seqPLoop
+-- * ur'
+
+-- Synths
+
+-- * sc-plugins
+
+-- Midi
+
+-- Multichannel and multitrack
+
+
+
+
+v (fast 12 $ superimpose (iter 4) "white lightblue blue darkblue")
+
+d1 $ jux (iter 4) $ n "0 .. 7" # sound "arpy"
+
+d1 $ someCycles (linger 0.25) $ n "0 .. 7" # sound "amencutup"
+  # speed 2
+
+
+d1 $ someCyclesBy 0.5 (# speed 2) $ sound "arpy arpy:2"
+
+d1 $ someCycles (fast 2) $ n "0 .. 3" # sound "amencutup"
+  # speed 1.5
+
+d1 $ sometimesBy 0.5 (# speed 2) $ sound "arpy*4"
+
+d2 $ sound "bd"
+
+a b c d
+b c d a
+c d a b
+d a b c
+a b c d
+
+cps 1
+cps (-1)
+
+
+d1 $ density 4
+   $ whenmod 8 4 (|-| n "[-2 -7]/4")
+   $ foldEvery [5,7] (|+| n "-12")
+   $ stut 4 0.5 0.75
+   $ n (toScale [0, 2, 4, 7, 9] "[0 4, 1 5, 2 2, 3 8]")
+   # s "supermandolin"
+   # sustain (slow 2 $ scale 1 2 sine)
+
+d1 $ jux rev $ chop "<4 2 8 32>" $ sound "arpy sn:3 bd sn:2"
+
+cps 0.3
+
+d1 $ jux rev $ loopAt 1 $ striate "8" $ sound "arpy <arpy:9 arpy:6>"
+
+d1 $ chunk 4 (0.25 <~) $ sound "bd sn:2 mt ~ ht lt cp lt"
+  # speed 1.5
+
+d1 $ off "<0.25 0 0.5>" (# (s "supermandolin" # legato 4)) $ jux rev $ (chunk 4 (fast 2 . (# speed 2)) $sound "superpiano*4")
+  # bpf 6000
+  # hpq 0.2
+  |+| n "<0 2 12 3>"
+
+
+
+d1 $ "<0 0.25 0.5>" <~ (sound "bd sn:2 mt ~ ht lt cp lt")
+
+
+cps (-1)
+
+cps 0.5

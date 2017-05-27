@@ -199,7 +199,19 @@ d1 $ sound "[[bd [bd bd bd bd]] bd sn:5] [bd sn:3]"
 
 -- * Play two subsequences at once by separating with a comma:
 
-d1 $ sound "[voodoo voodoo:3, arpy arpy:4 arpy:2]"
+
+
+d1 $ sound "[voodoo voodoo:3 [voodoo:2 voodoo:8] voodoo:1, arpy arpy:4 arpy:2]"
+  # crush "3 4"
+
+d1 $ sound "~ [sn mt, arpy:2 arpy:4 arpy] ~"
+
+cps 0.5
+
+cps (-1)
+
+voodoo    voodooo:3
+arpy   arpy:4   arpy:2
 
 -- * compare how [,] and {,} work:
 

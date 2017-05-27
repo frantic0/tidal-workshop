@@ -149,7 +149,7 @@ d1 $ sound "drum drum arpy arpy"
 -- * sine
 
 d1 $ sound "drum drum drum drum drum drum drum drum"
-  # gain (sine + 0.25)
+  # gain (fast 2 (sine + 0.5))
 
 -- * this doesn't work!
 

@@ -271,6 +271,10 @@ d2 $ sound "[bd sn] [sn:1 bd sn] _"
 
 v $ "[red blue green] [orange purple black] _"
 
+d1 $ n "[c c c c] ~ c*3" # sound "superpi"
+  # legato 1
+
+
 -- ** (2,5) : A thirteenth century Persian rhythm called Khafif-e-ramal.
 -- ** (3,4) : The archetypal pattern of the Cumbia from Colombia, as well as a Calypso rhythm from Trinidad.
 -- ** (3,5,2) : Another thirteenth century Persian rhythm by the name of Khafif-e-ramal, as well as a Rumanian folk-dance rhythm.

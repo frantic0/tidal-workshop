@@ -404,7 +404,13 @@ d2 $ every 3 ((|*| speed 0.5) . fast 0.5)
 
 v (fast 12 $ superimpose (iter 4) "white lightblue blue darkblue")
 
-d1 $  (iter 4) $ n "0 .. 7" # sound "arpy"
+d1 $ jux (iter 4) $ n "0 .. 7" # sound "arpy"
+
+d1 $ someCycles (linger 0.25) $ n "0 .. 7" # sound "amencutup"
+  # speed 2
+
+
+d1 $ sometim (# speed 2) $ sound "arpy*4"
 
 d2 $ sound "bd"
 

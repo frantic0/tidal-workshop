@@ -181,7 +181,7 @@ d1 $ slow 2 $ sound "bd [bd [bd cp] arpy] bd bd"
 
 cps 0.5
 
-d1 $ degradeBy 0.2 (sound "bd [cp lt] [~ bd]" # n "1 2 3")
+d1 $ sound "bd? [cp? lt?] [~ bd?]"
 
 d2 $ sound "arpy [arpy arpy:2]"
 

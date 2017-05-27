@@ -230,7 +230,10 @@ d1 $ jux rev $ chop "<32 64 8>" $ sound "bd sn:2"
   # gain 1.1
 
 
-d1 $ jux rev $ loopAt 8 $ chop "<32 64>" $ sound "bev"
+d1 $ jux rev $ loopAt 8 $ chop "<32 64>" $
+
+d1 $ jux rev $ loopAt "<16 8 4>" $ chop 16 $  sound "bev"
+
 
 
 d1 $ sound "{voodoo voodoo:3, arpy arpy:4 arpy:2}"

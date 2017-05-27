@@ -13,25 +13,15 @@
 <stop offset="0" style="stop-color:rgb(0%,50.196078%,0%);stop-opacity:1;"/>
 <stop offset="1" style="stop-color:rgb(0%,50.196078%,0%);stop-opacity:0.5;"/>
 </linearGradient>
-<linearGradient id="linear3" gradientUnits="userSpaceOnUse" x1="200" y1="0" x2="333.333333" y2="0" >
+<linearGradient id="linear3" gradientUnits="userSpaceOnUse" x1="200" y1="0" x2="600" y2="0" >
 <stop offset="0" style="stop-color:rgb(100%,64.705882%,0%);stop-opacity:1;"/>
 <stop offset="1" style="stop-color:rgb(100%,64.705882%,0%);stop-opacity:0.5;"/>
 </linearGradient>
-<linearGradient id="linear4" gradientUnits="userSpaceOnUse" x1="333.333333" y1="0" x2="466.666667" y2="0" >
-<stop offset="0" style="stop-color:rgb(50.196078%,0%,50.196078%);stop-opacity:1;"/>
-<stop offset="1" style="stop-color:rgb(50.196078%,0%,50.196078%);stop-opacity:0.5;"/>
-</linearGradient>
-<linearGradient id="linear5" gradientUnits="userSpaceOnUse" x1="466.666667" y1="0" x2="600" y2="0" >
-<stop offset="0" style="stop-color:rgb(0%,0%,0%);stop-opacity:1;"/>
-<stop offset="1" style="stop-color:rgb(0%,0%,0%);stop-opacity:0.5;"/>
-</linearGradient>
 </defs>
-<g id="surface53">
+<g id="surface57">
 <path style=" stroke:none;fill-rule:nonzero;fill:url(#linear0);" d="M 0 0 L 66.667969 0 L 66.667969 15 L 0 15 Z M 0 0 "/>
 <path style=" stroke:none;fill-rule:nonzero;fill:url(#linear1);" d="M 66.667969 0 L 133.335938 0 L 133.335938 15 L 66.667969 15 Z M 66.667969 0 "/>
 <path style=" stroke:none;fill-rule:nonzero;fill:url(#linear2);" d="M 133.332031 0 L 200 0 L 200 15 L 133.332031 15 Z M 133.332031 0 "/>
-<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear3);" d="M 200 0 L 333.332031 0 L 333.332031 15 L 200 15 Z M 200 0 "/>
-<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear4);" d="M 333.332031 0 L 466.664062 0 L 466.664062 15 L 333.332031 15 Z M 333.332031 0 "/>
-<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear5);" d="M 466.667969 0 L 600 0 L 600 15 L 466.667969 15 Z M 466.667969 0 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear3);" d="M 200 0 L 600 0 L 600 15 L 200 15 Z M 200 0 "/>
 </g>
 </svg>

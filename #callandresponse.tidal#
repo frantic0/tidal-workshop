@@ -446,7 +446,7 @@ d1 $ jux rev $ loopAt 1 $ striate "8" $ sound "arpy <arpy:9 arpy:6>"
 d1 $ chunk 4 (0.25 <~) $ sound "bd sn:2 mt ~ ht lt cp lt"
   # speed 1.5
 
-d1 $ slow 2 $ jux rev $ sometimes (|+| n 12) $
+d1 $ degrade $ slow 2 $ jux rev $ sometimes (|+| n 12) $
   off "<0.25 0.125 0.5>" (# (s "supermandolin" # legato 2))
   $ chunk 4 (fast 2) $ off 0.25 (|+| n 12) $ (chunk 4 (fast 2 . (# speed 2))
                                               $ sound "superpiano(3,8)")
@@ -455,7 +455,12 @@ d1 $ slow 2 $ jux rev $ sometimes (|+| n 12) $
   |+| n "<[0 12] <2 5> [12 7] 3>"
   |+| n "-24"
   # vowel "<a i o>"
+  # gain 1.2
 
+
+d1 $ n "c8(3,8) e8(3,8) f8(" # sound "rash"
+  # hpf 4000
+  # hpq 0.1
 
 d1 $ "<0 0.25 0.5>" <~ (sound "bd sn:2 mt ~ ht lt cp lt")
 

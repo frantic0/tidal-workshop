@@ -208,7 +208,7 @@ d1 $ sound "~ [sn mt, arpy:2 arpy:4 arpy] ~"
 
 v $ "yellow [red blue, [green [tomato black] purple] orange grey] lightblue"
 
-cps 0.5
+  cps 0.5
 
 cps (-1)
 

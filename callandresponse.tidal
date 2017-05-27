@@ -427,3 +427,26 @@ a b c d
 
 cps 1
 cps (-1)
+
+
+d1 $ density 4
+   $ whenmod 8 4 (|-| n "[-2 -7]/4")
+   $ foldEvery [5,7] (|+| n "-12")
+   $ stut 4 0.5 0.75
+   $ n (toScale [0, 2, 4, 7, 9] "[0 4, 1 5, 2 2, 3 8]")
+   # s "supermandolin"
+   # sustain (slow 2 $ scale 1 2 sine)
+
+d1 $ jux rev $ chop "<4 2 8 32>" $ sound "arpy sn:3 bd sn:2"
+
+cps 1
+
+d1 $ jux rev $ loopAt 1 $ striate "8" $ sound "arpy <arpy:9 arpy:6>"
+
+d1 $ chunk 4 (fast 2) $ sound "bd sn:2 mt ~ ht lt cp lt"
+  # speed 1.5
+
+
+cps (-1)
+
+cps 0.5

@@ -171,7 +171,6 @@ d1 $ sound "drum drum drum drum drum drum drum drum"
   # gain (rand + 0.25)
 
 -- * choose
-
 d1 $ sound "drum drum drum drum drum drum drum drum"
   # speed (choose [0.5, 2, 4])
 

@@ -150,8 +150,12 @@ d1 $ sound "drum drum arpy arpy"
 
 d1 $ sound "drum drum drum drum drum drum drum drum"
   # gain (fast 2 (sine + 0.5))
-  # lpf (slow 4 (scale 100 7000 "0 0.4"))
-  # lpq 0.2
+  # bpf 1000
+  # bpq 1
+
+
+
+hush
 
 scale a b p
 slow a p

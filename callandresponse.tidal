@@ -464,13 +464,18 @@ d1 $ slow 2 $ off 0.25 (hurry 0.5) $ jux rev $ slow 2 $ n (off 0.125 (+12) $ off
   # orbit 2
   # gain 0.8
 
-d1 $ degrade $ jux rev $ slow 4 $ off 0.125 (# crush 5) $ every 2 (gap 16) $ sound "<casio:1 casio:1 casio:0>(5,16)"
+degrade $ jux rev $ slow 4 $ off 0.125 (# crush 5) $ every 2 (gap 16) $ sound "<casio:1 casio:1 casio:0>(5,16)"
   # hpf 3000
   # hpq 0.1
   # orbit 2
   # speed "[1,1.01]"
   |*| up "<0 [5 7] 12>"
 
+
+d1 $ cat [sound "bd sn*4",
+          sound "arpy(3,8)"
+         ]
+  # speed 2
 
 
 

@@ -274,7 +274,10 @@ v $ "[red blue green] [orange purple black] _"
 d1 $ jux rev $ off 0.25 (|+| n "12") $ off (1/8) (|+| n "7")
   $ slow 2 $ n "c(3,8) e(3,8) g(3,8) f5" # sound "superpiano"
   # legato 4
-  
+
+d1 $ jux rev $
+  n (off 0.125 (+12) $ off 0.125 (+ 7) $ slow 2 $ "c7(3,8) a7*2 f7(3,8) e7(3,8,2)") # sound "rash"
+ 
 hush
 
 -- ** (2,5) : A thirteenth century Persian rhythm called Khafif-e-ramal.

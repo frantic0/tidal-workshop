@@ -223,7 +223,7 @@ arpy   arpy:4   arpy:2
 
 -- * compare how [,] and {,} work:
 
-d1 $ jux rev $ sound "cp bd"
+d1 $ jux rev $ sound "{drum drum:2 [~ mt] bd*3, arpy:1 [~ arpy:2] arpy:1}"
   # gain 1.2
 
 d1 $ sound "bd"

@@ -338,7 +338,13 @@ hush
 -- * jux
 
 
-d1 $ sound "bd [~ lt] <ht bd> lt:3"
+d1 $ every 4 (fast 2) $ sound "bd [~ lt] <ht bd> lt:3"
+
+d1 $ every 4 (0.25 <~) (sound "bd [~ lt] <ht bd> lt:3")
+
+d1 $ every 3 (0.125 <~) $ every 4 (0.25 <~) (sound "bd [~ lt] <ht bd> lt:3")
+
+d1 $ jux rev $ every 4 (chop 4) $ every 3 (# speed "2") (sound "bd [~ lt] <ht bd> lt:3")
 
 -- More transformations
 

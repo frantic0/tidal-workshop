@@ -348,12 +348,22 @@ d1 $ jux rev $ every 4 (chop 4) $ every 3 (# speed "2") (sound "bd [~ lt] <ht bd
 
 d1 $ sometimes (# crush 2) (sound "bd sn cp sn:2")
 
+
 d1 $ someCycles (crush "2 4*3" #) (sound "bd sn cp sn:2")
 
 d1 $ every 3 (crush "2 4*3" #) (sound "bd sn cp sn:2")
 
 d1 $ someCycles (fast 2) (sound "bd sn cp sn:2")
 
+d1 $ gap 4 $ slow 2 $ n "c5(3,8) ~ a5 ~" # sound "superzow"
+   # orbit 2
+   # gain 0.9
+   # lpf 400
+
+d1 $ jux ((# speed 0.5) . fast 3) $ sound "bd sn"
+
+d2 $ every 3 ((|*| speed 0.5) . fast 0.5)
+  $ loopAt 2 $ chop 8 $ sound "breaks165"
 
 
 -- More transformations
@@ -388,3 +398,29 @@ d1 $ someCycles (fast 2) (sound "bd sn cp sn:2")
 -- Midi
 
 -- Multichannel and multitrack
+
+
+
+
+v (fast 12 $ superimpose (iter 4) "white lightblue blue darkblue")
+
+d1 $ jux (iter 4) $ n "0 .. 7" # sound "arpy"
+
+d1 $ someCycles (linger 0.25) $ n "0 .. 7" # sound "amencutup"
+  # speed 2
+
+
+d1 $ someCyclesBy 0.5 (# speed 2) $ sound "arpy*4"
+
+d1 $ sometimesBy 0.5 (# speed 2) $ sound "arpy*4"
+
+d2 $ sound "bd"
+
+a b c d
+b c d a
+c d a b
+d a b c
+a b c d
+
+cps 1
+cps (-1)

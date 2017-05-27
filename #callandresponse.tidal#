@@ -273,7 +273,7 @@ v $ "[red blue green] [orange purple black] _"
 
 d1 $ n "[c e c gs5] ~ c*3" # sound "superpiano"
 
-"c" :: Pattern Int
+"c5 e6" :: Pattern Int
 
 -- ** (2,5) : A thirteenth century Persian rhythm called Khafif-e-ramal.
 -- ** (3,4) : The archetypal pattern of the Cumbia from Colombia, as well as a Calypso rhythm from Trinidad.

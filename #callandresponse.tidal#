@@ -458,10 +458,11 @@ d1 $ degrade $ slow 2 $ jux rev $ sometimes (|+| n 12) $
   # gain 1.2
 
 
-d1 $ off 0.25 (hurry 0.5) $ jux rev $ slow 2 $ n (off 0.125 (+12) $ off 0.25 (+ 7) $ "c8(3,8) [~ e8*2] f8(3,8) g8(3,8)") # sound "rash"
+d1 $ slow 2 $ off 0.25 (hurry 0.5) $ jux rev $ slow 2 $ n (off 0.125 (+12) $ off 0.25 (+ 7) $ degradeBy 0.7 "c8(3,8) [~ e8*2] f8(3,8) g8(3,8)") # sound "rash"
   # hpf 2000
   # hpq 0.4
-  
+  # orbit 2
+  # gain 0.8
 
 d1 $ "<0 0.25 0.5>" <~ (sound "bd sn:2 mt ~ ht lt cp lt")
 

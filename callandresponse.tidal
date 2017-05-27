@@ -208,16 +208,26 @@ d1 $ sound "~ [sn mt, arpy:2 arpy:4 arpy] ~"
 
 v $ "yellow [red blue, [green [tomato black] purple] orange grey] lightblue"
 
-cps 0.5
+  cps 0.5
 
 cps (-1)
+
+
+http://192.168.1.77/edit.html
+
+
+d1 $ up "0 7 12" # sound "arpy"
 
 voodoo    voodooo:3
 arpy   arpy:4   arpy:2
 
 -- * compare how [,] and {,} work:
 
-d1 $ sound "[voodoo voodoo:3, arpy arpy:4 arpy:2]"
+d1 $ jux rev $ sound "{drum drum:2 [~ mt] bd*3, arpy:1 [~ arpy:2] arpy:1}"
+  # gain 1.2
+
+d1 $ sound "bd"
+
 
 d1 $ sound "{voodoo voodoo:3, arpy arpy:4 arpy:2}"
 
@@ -243,7 +253,17 @@ d1 $ sound "bd*4 cp*3 arpy/2"
 
 -- * Euclidian patterns
 
-d1 $ sound "bd(3,8)"
+d1 $ sound "bd(<3 5>,8)"
+  # gain 1.4
+
+
+d1 $ sound "[bd sn:2 arpy]/2 [sn:4 bd]"
+  # gain 1.3
+
+d2 $ sound "cp"
+  # gain 1.3
+
+
 
 -- ** (2,5) : A thirteenth century Persian rhythm called Khafif-e-ramal.
 -- ** (3,4) : The archetypal pattern of the Cumbia from Colombia, as well as a Calypso rhythm from Trinidad.

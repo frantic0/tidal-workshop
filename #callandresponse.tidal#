@@ -22,8 +22,15 @@ d1 $ crush "6 4 3 5*2 1 3 2 4" # sound "arpy"
 
 d2 $ sound "bd [sn sn:2, arpy*3] [cp off newnotes newnotes:3]/1.5 sn:2"
 
-d3 $ sound "[sn sn:2 cp, arpy arpy:2]"
+d3 $ sound "{sn sn:2*2 cp, arpy arpy:2}"
 
+d1 $ (pure now) <~ (do {x <- slow (12 * 12) $ run  12; jux ((pure $ x/12) <~) $ sound "cp ! ! ~ cp ! ~ cp ~ cp ! ~"})
+
+d1 $ sound "bd ! ! !"
+
+now
+
+cps (1)
 
 hush
 -- Stop making a sound

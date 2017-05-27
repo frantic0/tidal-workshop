@@ -446,9 +446,13 @@ d1 $ jux rev $ loopAt 1 $ striate "8" $ sound "arpy <arpy:9 arpy:6>"
 d1 $ chunk 4 (0.25 <~) $ sound "bd sn:2 mt ~ ht lt cp lt"
   # speed 1.5
 
-d1 $ chunk 4 () chop 8 $ sound "cp"
-  # hpf 5000
+d1 $ jux rev $ (chunk 4 (slow 2 . (# speed 2)) $ chop 16 $ sound "cp*2")
+  # hpf 6000
   # hpq 0.2
+
+
+
+
 
 d1 $ "<0 0.25 0.5>" <~ (sound "bd sn:2 mt ~ ht lt cp lt")
 

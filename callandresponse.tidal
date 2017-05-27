@@ -177,7 +177,13 @@ d1 $ sound "drum ~ drum drum:2 arpy ~ arpy:3 ~"
 
 -- * Fit a subsequence into a step with square brackets:
 
-d1 $ sound "bd [bd cp] bd bd"
+d1 $ slow 2 $ sound "bd [bd [bd cp] arpy] bd bd"
+
+cps 0.5
+
+d1 $ degradeBy 0.2 (sound "bd [cp lt] [~ bd]" # n "1 2 3")
+
+d2 $ sound "arpy [arpy arpy:2]"
 
 -- * This can make for flexible time signatures:
 

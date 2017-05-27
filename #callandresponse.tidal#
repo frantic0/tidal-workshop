@@ -33,11 +33,12 @@ d1 $ sound "drum:1"
 
 -- Make a step sequence
 
+cps 0.8
 
 d1 $ sound "bd mt cp lt bd bd bd bd"
 
 d2 $ sound "arpy arpy arpy"
-
+d1 silence
 -- Add rests
 
 d1 $ sound "bd ~ sn:2 ~ ~ bd sn:2 ~"
@@ -53,7 +54,7 @@ d2 $ sound "~ arpy:3"
 
 -- Change the fixed cycle duration with cps
 
-cps 0.8
+cps (120/60)
 
 -- Pause the clock
 

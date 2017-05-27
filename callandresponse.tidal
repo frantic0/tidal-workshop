@@ -275,6 +275,8 @@ d1 $ jux rev $ off 0.25 (|+| n "12") $ off (1/8) (|+| n "7")
   $ slow 2 $ n "c(3,8) e(3,8) g(3,8) f5" # sound "superpiano"
   # legato 4
 
+hush
+
 -- ** (2,5) : A thirteenth century Persian rhythm called Khafif-e-ramal.
 -- ** (3,4) : The archetypal pattern of the Cumbia from Colombia, as well as a Calypso rhythm from Trinidad.
 -- ** (3,5,2) : Another thirteenth century Persian rhythm by the name of Khafif-e-ramal, as well as a Rumanian folk-dance rhythm.

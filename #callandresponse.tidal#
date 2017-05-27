@@ -355,11 +355,12 @@ d1 $ every 3 (crush "2 4*3" #) (sound "bd sn cp sn:2")
 
 d1 $ someCycles (fast 2) (sound "bd sn cp sn:2")
 
-d1 $ slow 2 $ n "c5(3,8) ~ a5 ~" # sound "superzow"
+d1 $ gap 4 $ slow 2 $ n "c5(3,8) ~ a5 ~" # sound "superzow"
    # orbit 2
    # gain 0.9
    # lpf 400
 
+d1 $ jux ((# speed 0.5) . fast 2) $ sound "bd sn"
 
 
 -- More transformations

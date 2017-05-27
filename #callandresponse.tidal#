@@ -464,12 +464,11 @@ d1 $ slow 2 $ off 0.25 (hurry 0.5) $ jux rev $ slow 2 $ n (off 0.125 (+12) $ off
   # orbit 2
   # gain 0.8
 
-d1 $ off (1/16) (# crush 3) $ chunk 8 (hurry 0.5) $ sound "bd(5,16)"
-  # hpf 3000
+d1 $ sometimes (# crush 4) $ every 4 (chop 8) $ sound "casio:1(5,16)"
+  # hpf 2000
   # hpq 0.3
-  # gain 0.5
   # orbit 2
-  |*| speed 0.5
+
 
 d1 $ "<0 0.25 0.5>" <~ (sound "bd sn:2 mt ~ ht lt cp lt")
 

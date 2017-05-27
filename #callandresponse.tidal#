@@ -437,6 +437,8 @@ d1 $ density 4
    # s "supermandolin"
    # sustain (slow 2 $ scale 1 2 sine)
 
-d1 $ slow "<4 2 3>" $ striate "<4 8>" $ sound "arpy sn:3 bd sn:2"
+d1 $ jux rev $ chop "<4 2 8 32>" $ sound "arpy sn:3 bd sn:2"
 
+d1 $ striate "4" $ sound "arpy"
+hush
 

@@ -398,3 +398,10 @@ d2 $ every 3 ((|*| speed 0.5) . fast 0.5)
 -- Midi
 
 -- Multichannel and multitrack
+
+
+
+
+v (fast 12 $ iter 4 "white lightblue blue darkblue")
+
+d1 $ n "0 1 2" # sound "alphabet"

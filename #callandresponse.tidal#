@@ -81,9 +81,9 @@ d1 $ n "0 1 2 3" # sound "arpy drum"
 
 -- * # replaces
 
-d1 $ n "0 1 2 3" + "4 1" # sound "arpy"
-  
-hus
+d1 $ n "0 1 2 3" # sound "arpy"
+
+
 -- * but |+| adds
 
 d1 $ n "0 1 2 3" # sound "arpy"

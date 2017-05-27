@@ -271,8 +271,9 @@ d2 $ sound "[bd sn] [sn:1 bd sn] _"
 
 v $ "[red blue green] [orange purple black] _"
 
-d1 $ n "[c e c g5]" # sound "superpiano"
-  |+| n "7"
+d1 $ off 0.125 (|+| n "7")
+  $ n "c(3,8) e g(3,8) g5" # sound "superpiano"
+  
 
 
 -- ** (2,5) : A thirteenth century Persian rhythm called Khafif-e-ramal.

@@ -212,7 +212,9 @@ v $ "yellow [red blue, [green [tomato black] purple] orange grey] lightblue"
 
 cps (-1)
 
-file:///home/alex/Dropbox/websocket/data/edit.html
+
+http://192.168.1.77/edit.html
+
 
 voodoo    voodooo:3
 arpy   arpy:4   arpy:2

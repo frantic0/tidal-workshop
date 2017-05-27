@@ -226,7 +226,8 @@ arpy   arpy:4   arpy:2
 d1 $ jux rev $ sound "{drum drum:2 [~ mt] bd*3, arpy:1 [~ arpy:2] arpy:1}"
   # gain 1.2
 
-d1 $ sound "bd"
+d1 $ jux rev $ chop "<32 64 8>" $ sound "bd sn:2"
+  # gain 1.1
 
 
 d1 $ sound "{voodoo voodoo:3, arpy arpy:4 arpy:2}"

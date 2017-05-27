@@ -33,8 +33,12 @@ d1 $ sound "drum:1"
 
 -- Make a step sequence
 
-d1 $ sound "bd mt cp lt"
+cps 0.8
 
+d1 $ sound "bd mt cp lt bd bd bd bd"
+
+d2 $ sound "arpy arpy arpy"
+d1 silence
 -- Add rests
 
 d1 $ sound "bd ~ sn:2 ~ ~ bd sn:2 ~"
@@ -50,7 +54,7 @@ d2 $ sound "~ arpy:3"
 
 -- Change the fixed cycle duration with cps
 
-cps 0.8
+cps (120/60)
 
 -- Pause the clock
 
@@ -66,12 +70,12 @@ hush
 
 d1 $ sound "arpy:0 arpy:1 arpy:2 arpy:3"
 
-d1 $ sound "arpy*4" # n "0 1 2 3"
+d1 $ sound "arpy" # n "0 1 2 3"
 
 -- Order matters -- patterns of sound vs patterns of n.
 -- e.g. you don't need the *4 on the above if you put n first
 
-d1 $ n "0 1 2 3" # sound "arpy"
+d1 $ n "0 1 2 3" # sound "arpy drum"
 
 -- Combining with |+|, |*| etc instead of #
 

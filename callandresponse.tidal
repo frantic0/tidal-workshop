@@ -410,7 +410,10 @@ d1 $ someCycles (linger 0.25) $ n "0 .. 7" # sound "amencutup"
   # speed 2
 
 
-d1 $ someCyclesBy 0.5 (# speed 2) $ sound "arpy*4"
+d1 $ someCyclesBy 0.5 (# speed 2) $ sound "arpy arpy:2"
+
+d1 $ someCycles (fast 2) $ n "0 .. 3" # sound "amencutup"
+  # speed 1.5
 
 d1 $ sometimesBy 0.5 (# speed 2) $ sound "arpy*4"
 

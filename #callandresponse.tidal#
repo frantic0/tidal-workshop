@@ -223,7 +223,11 @@ arpy   arpy:4   arpy:2
 
 -- * compare how [,] and {,} work:
 
-d1 $ sound "[voodoo voodoo:3, arpy arpy:4 arpy:2]"
+d1 $ jux rev $ sound "cp bd"
+  # gain 1.2
+
+d1 $ sound "bd"
+
 
 d1 $ sound "{voodoo voodoo:3, arpy arpy:4 arpy:2}"
 

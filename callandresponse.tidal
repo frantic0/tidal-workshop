@@ -256,7 +256,6 @@ d1 $ sound "bd*4 cp*3 arpy/2"
 d1 $ sound "bd(<3 5>,8)"
   # gain 1.4
 
-
 d1 $ sound "[bd sn:2 arpy]/2 [sn:4 bd]"
   # gain 1.3
 

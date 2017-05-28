@@ -614,4 +614,23 @@ import Sound.Tidal.Scales
 d3 $ jux (rev) $ n (off 0.25 (+7) $ toScale majPent ("0 2*2 [~ 3] 5" + "<0 -3 2 1>"))
   # sound "supermandolin"
   # legato 4
-  
+
+
+d1 $ weave 16 (pan saw)
+    [sound "bd*4",
+     sound "arpy*3",
+     sound "sn:2*2",
+     sound "h(3,8)"
+    ]
+
+d2 $ jux rev $ weave 16 (n "0 .. 7" # sound "arpy")
+    [
+     vowel "a e i",
+     vowel "i o",
+     speed "1 2",
+     crush "2 [3 6]"
+    ]
+
+
+
+d3 silence

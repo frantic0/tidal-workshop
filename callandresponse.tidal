@@ -497,6 +497,8 @@ cps 0.5
 
 Example snippets:
 
+Go to Edit -> Snippets and paste in this:
+
 '.source.tidalcycles':
   'full on gabba':
     'prefix': 'gabba'

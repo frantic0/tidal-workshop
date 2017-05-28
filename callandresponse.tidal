@@ -493,3 +493,14 @@ d1 $ "<0 0.25 0.5>" <~ (sound "bd sn:2 mt ~ ht lt cp lt")
 cps (-1)
 
 cps 0.5
+
+
+Example snippets:
+
+'.source.tidalcycles':
+  'full on gabba':
+    'prefix': 'gabba'
+    'body': 'd1 $ sound "gabba*8"'
+  'anohter thing':
+    'prefix': 'nice'
+    'body': 'd2 $ sound "arpy*3"'

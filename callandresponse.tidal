@@ -39,6 +39,27 @@ d2 $ sound "arpy"
    # delaytime 0.4
    # delayfeedback 0.9
 
+d1 $ sound "superpiano"
+   # speed 2
+
+d1 $ sound "superpiano" # speed 2
+d1 $ sound "bd*13"
+  # pan saw
+
+d1 $ sound "arpy*3" # speed "2 1 2 1 4 1"
+d1 $ sound "superpiano"
+   # speed 2
+d1 $ sound "superpiano"
+   # speed 2
+
+  # speed (saw + 0.5)
+
+d2 $ sound "bd*3"
+
+http://192.168.1.91:8000/index8.html
+gabba
+hush
+
 now
 
 cps (1)
@@ -494,15 +515,10 @@ cps (-1)
 
 cps 0.5
 
+d1 $ stut' 8 0.125 (|*| speed "<2 1.5>") $ sound "sn:1 bd"
 
-Example snippets:
 
-Go to Edit -> Snippets and paste in this:
+d1 $
 
-'.source.tidalcycles':
-  'full on gabba':
-    'prefix': 'gabba'
-    'body': 'd1 $ sound "gabba*8"'
-  'anohter thing':
-    'prefix': 'nice'
-    'body': 'd2 $ sound "arpy*3"'
+d1 $ sound "moog ~ ~ ~ ~ ~"
+  # legato 1

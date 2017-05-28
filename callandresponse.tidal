@@ -524,3 +524,21 @@ d1 $
 
 d1 $ sound "moog ~ ~ ~ ~ ~"
   # legato 1
+
+
+let gerald = jux rev $ sound "bd(3,8)"
+    susan = sound "arpy(3,8)" # crush 5
+
+do now <- getNow
+   d1 $ rotR now $ seqP
+     [(0, 4, gerald),
+      (2, 6, susan),
+      (5, 7, gerald # crush 4)
+     ]
+
+now <- getNow
+
+hush
+
+cps (-1)
+cps 0.9

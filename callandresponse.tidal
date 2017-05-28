@@ -27,7 +27,19 @@ d3 $ sound "{sn sn:2*2 cp, arpy arpy:2}"
 
 d1 $ (pure now) <~ (do {x <- slow (12 * 12) $ run  12; jux ((pure $ x/12) <~) $ sound "cp ! ! ~ cp ! ~ cp ~ cp ! ~"})
 
+d1 $ sound "bd"
+   # room 0.2
+   # size 0.5
+   # speed 4
+   # orbit 0
 
+d2 $ sound "arpy"
+   # orbit 1
+   # delay 0.4
+   # delaytime 0.4
+   # delayfeedback 0.9
+
+   hus
 now
 
 cps (1)

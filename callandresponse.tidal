@@ -6,6 +6,8 @@
 -- seqP seqPLoop
 -- ur'
 
+d1 $ sound "bd"
+
 -- A TidalCycles workbook
 
 -- Call and Response workshop run by Alex McLean

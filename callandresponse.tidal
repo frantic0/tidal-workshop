@@ -631,6 +631,6 @@ d2 $ jux rev $ weave 16 (n "0 .. 7" # sound "arpy")
      crush "2 [3 6]"
     ]
 
-
+d3 $ jux rev $ smash 4 [1,0.5,3,4] $ brak $ sound "bd*3 [bd*4 bd*8]"
 
 d3 silence

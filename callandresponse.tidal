@@ -606,3 +606,12 @@ d4 $ sound "[bd sd, hh*8, future(3,8)]"
 
 hush
 d2 $ every 2 (# vowel "o") (sound "bd sn" # n "0 2 3")
+
+import Sound.Tidal.Scales
+
+(toScale major (choose [0, 2, 3, 4, 5, 6, 7, 9]))
+
+d3 $ jux (rev) $ n (off 0.25 (+7) $ toScale majPent ("0 2*2 [~ 3] 5" + "<0 -3 2 1>"))
+  # sound "supermandolin"
+  # legato 4
+  

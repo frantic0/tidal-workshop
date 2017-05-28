@@ -560,7 +560,20 @@ do now <- getNow
 
 now <- getNow
 
+
+t1 (xfadeIn 8) $ sound "newnotes:3(5,8)"
+
+t1 anticipate (sound "bd(3,8)")
+
 hush
+
+d1 $ slow 8 $ (loopAt 8 $ jux rev $ striate' 32 (1/32) $ sound "bev*8")
+   # gain 1
+   |+| pan (slow 8 saw)
+   # orbit 2
+   # lpf (sine * 2000 + 100)
+   # lpq 0.3
+
 
 cps (-1)
 cps 0.9

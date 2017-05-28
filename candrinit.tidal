@@ -1,6 +1,8 @@
 import Sound.Tidal.OscStream
 
-{- 
+
+
+{-
 d1 $ jux rev $ stut 4 0.9 "<0.01 0.02 0.01>" $
    chop 8 $ sound "bd(3,8) sn:2"
 -}

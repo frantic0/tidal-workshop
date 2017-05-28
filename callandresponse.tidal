@@ -536,6 +536,28 @@ do now <- getNow
       (5, 7, gerald # crush 4)
      ]
 
+
+     let patterns = [("simplebd", sound "bd(3,8)"),
+                     ("tune", up "0 7 12 2" # sound "arpy"),
+                     ("sandwich", chop 8 (sound "sn:2"))
+                    ]
+         txs = [("crash",
+                 degrade . (# speed (rev $ saw + 1))
+                ),
+                ("change",
+                 rev . chop 8
+                ),
+                ("in",
+                 unDegradeBy (saw1)
+                ),
+                ("out",
+                 degradeBy (saw1)
+                ),
+                ("higher", (# speed 2))
+               ]
+     in
+     d1 $ ur' 16 "[simplebd simplebd:change, ~ tune] [sandwich sandwich:higher]" patterns txs
+
 now <- getNow
 
 hush

@@ -101,7 +101,7 @@ d1 $ iter 4 $ slow 2 $ n "0 .. 15" # sound "amencutup"
 
 d1 $ jux rev $ iter 4 $ slow 2 $ n "0 .. 15" # sound "amencutup"
 
--- Wair, what is that iter doing?
+-- Wait, what is that iter doing?
 
 d1 $ slow 2 $ n "0 .. 3" # sound "alphabet"
 

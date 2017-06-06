@@ -30,7 +30,7 @@ d1 $ sound "[bd sn:1 ht:4, arpy arpy:2 arpy:5]"
 
 d1 $ sound "[bd sn:1 ht:4, arpy arpy:2]"
 
--- Align the steps:
+-- Align the steps rather than the cycles:
 
 d1 $ sound "{bd sn:1 ht:4, arpy arpy:2}"
 

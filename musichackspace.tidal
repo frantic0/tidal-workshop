@@ -1,7 +1,7 @@
 
-d1 $ sound "arpy"
+d1 $sound "arpy"
 
-d1 $ chop 4 $ sound "arpy"
+d1 $ chop 4 (sound "arpy")
 
 d1 $ rev $ chop 4 $ sound "arpy"
 

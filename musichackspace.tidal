@@ -4,7 +4,7 @@ d1 $ sound "arpy"
 
 d1 $ chop 4 (sound "arpy")
 
--- Chop makes a pattern of bits of sound
+-- Chop makes a pattern of bits of sound, that you can transform again
 
 d1 $ rev $ chop 4 $ sound "arpy"
 

@@ -1,0 +1,15 @@
+-- Chopping into bits
+
+d1 $ sound "arpy"
+
+d1 $ chop 4 (sound "arpy")
+
+-- Chop makes a patte
+
+d1 $ rev $ chop 4 $ sound "arpy"
+
+-- Difference between chop and striate
+
+d1 $ chop 4 $ sound "arpy arpy:1"
+
+d1 $ striate 4 $ sound "arpy arpy:1"

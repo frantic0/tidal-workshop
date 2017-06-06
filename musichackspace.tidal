@@ -30,6 +30,10 @@ d1 $ sound "[bd sn:1 ht:4, arpy arpy:2 arpy:5]"
 
 d1 $ sound "[bd sn:1 ht:4, arpy arpy:2]"
 
+-- Align the steps:
+
+d1 $ sound "{bd sn:1 ht:4, arpy arpy:2}"
+
 -- Chopping into bits
 
 d1 $ sound "arpy"

@@ -18,7 +18,17 @@ d1 $ sound "bd sn:1"
 
 d1 $ sound "bd sn:1 ht:4"
 
--- 
+-- Subsequences
+
+d1 $ sound "bd [sn:1 sn:3] ht:4"
+
+-- Play two sequences at the same time
+
+d1 $ sound "[bd sn:1 ht:4, arpy arpy:2 arpy:5]"
+
+-- They don't have to be the same length
+
+d1 $ sound "[bd sn:1 ht:4, arpy arpy:2 arpy:5]"
 
 -- Chopping into bits
 

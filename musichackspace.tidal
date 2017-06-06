@@ -114,7 +114,7 @@ d1 $ slow 2 $ iter 4 $ n "0 .. 3" # sound "alphabet"
 5: a b c d
 6: ...
 
--- And the jux? Runs a function only in one speaker!
+-- And the jux? Runs a function (in this case rev) only in one speaker!
 
 d1 $ slow 4 $ n "0 .. 3" # sound "numbers"
 

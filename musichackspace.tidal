@@ -55,3 +55,20 @@ d1 $ chop 4 (sound "arpy arpy:1")
 
 d1 $ striate 4 (sound "arpy arpy:1")
 
+-- You can pattern effects as well
+
+d1 $ sound "bd*8"
+  # pan "0 1"
+
+d1 $ sound "bd*8"
+  # room "0 0.6 0.9"
+  # size "0 0.4 0.9"
+
+d1 $ sound "bd*8"
+  # vowel "a e i"
+
+-- Put the effect first if you want it to control the 'structure' of
+-- the pattern
+
+d1 $ vowel "x e [i o] u" # sound "bd"
+

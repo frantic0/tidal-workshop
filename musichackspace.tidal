@@ -101,7 +101,7 @@ d1 $ n "0 .. 3" # sound "amencutup"
 
 d1 $ iter 4 $ slow 2 $ n "0 .. 15" # sound "amencutup"
 
-d1 $ jux rev $ iter 4 $ slow 2 $ n "0 .. 15" # sound "amencutup"
+d1 $ every 4 (slow 2 . (|*| speed 0.5)) $ jux rev $ iter 4 $ slow 2 $ n "0 .. 15" # sound "amencutup"
 
 -- Wait, what is that iter doing? Shifting the pattern every cycle
 

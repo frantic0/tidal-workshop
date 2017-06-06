@@ -2,6 +2,10 @@
 
 d1 $ sound "drum"
 
+-- Replace that sound with silence
+
+d1 $ silence
+
 -- Pick a different drum sound with :
 
 d1 $ sound "drum:2"
@@ -9,6 +13,12 @@ d1 $ sound "drum:2"
 -- Sequences
 
 d1 $ sound "bd sn:1"
+
+-- Longer sequences
+
+d1 $ sound "bd sn:1 ht:4"
+
+--
 
 -- Chopping into bits
 

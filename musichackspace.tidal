@@ -97,5 +97,7 @@ d1 $ n "0 1 2 3" # sound "amencutup"
 
 d1 $ n "0 .. 3" # sound "amencutup"
 
+d1 $ iter 4 $ slow 2 $ n "0 .. 15" # sound "amencutup"
+
 d1 $ jux rev $ iter 4 $ slow 2 $ n "0 .. 15" # sound "amencutup"
 

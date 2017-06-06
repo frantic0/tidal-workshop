@@ -18,7 +18,7 @@ d1 $ sound "bd sn:1"
 
 d1 $ sound "bd sn:1 ht:4"
 
---
+-- 
 
 -- Chopping into bits
 

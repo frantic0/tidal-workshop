@@ -110,5 +110,5 @@ d1 $ slow 2 $ iter 4 $ n "0 .. 3" # sound "alphabet"
 1: a b c d
 2: b c d a
 3: c d a b
-4: b d b c
+4: d a b c
 

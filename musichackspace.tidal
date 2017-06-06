@@ -42,10 +42,10 @@ d1 $ chop 4 (sound "arpy")
 
 -- Chop makes a pattern of bits of sound, that you can transform again
 
-d1 $ rev $ chop 4 $ sound "arpy"
+d1 $ rev $ chop 4 (sound "arpy")
 
--- Difference between chop and striate
+-- Compare chop and striate
 
-d1 $ chop 4 $ sound "arpy arpy:1"
+d1 $ chop 4 (sound "arpy arpy:1")
 
-d1 $ striate 4 $ sound "arpy arpy:1"
+d1 $ striate 4 (sound "arpy arpy:1")

@@ -74,5 +74,6 @@ d1 $ vowel "x e [i o] u" # sound "bd"
 
 -- For patterns of single numbers, you can miss off the quotes
 
-d1 $ sound "bd"
+d1 $ sound "bd bd"
   # pan 1
+

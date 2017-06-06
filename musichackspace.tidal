@@ -4,6 +4,8 @@ d1 $ sound "arpy"
 
 d1 $ chop 4 (sound "arpy")
 
+-- Chop makes a pattern of bits of sound
+
 d1 $ rev $ chop 4 $ sound "arpy"
 
 -- Difference between chop and striate

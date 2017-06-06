@@ -1,6 +1,10 @@
--- Sounds
+-- Play a drum sound
 
-d1 $ sound "bd"
+d1 $ sound "drum"
+
+-- Pick a different drum sound with :
+
+d1 $ sound "drum:2"
 
 -- Sequences
 

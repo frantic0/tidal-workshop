@@ -1,0 +1,130 @@
+-- Play a drum sound
+
+d1 $ sound "drum"
+
+-- Replace that sound with silence
+
+d1 $ silence
+
+-- Pick a different drum sound with :
+
+d1 $ sound "drum:2"
+
+-- (you can find these samples and add to them in your Dirt-Samples folder)
+
+-- Sequences
+
+d1 $ sound "bd sn:1"
+
+-- Longer sequences
+
+d1 $ sound "bd sn:1 ht:4"
+
+-- Subsequences
+
+d1 $ sound "bd [sn:1 sn:3] ht:4"
+
+-- Play two sequences at the same time
+
+d1 $ sound "[bd sn:1 ht:4, arpy arpy:2 arpy:5]"
+
+-- They don't have to be the same length
+
+d1 $ sound "[bd sn:1 ht:4, arpy arpy:2]"
+
+-- Align the steps rather than the cycles:
+
+d1 $ sound "{bd sn:1 ht:4, arpy arpy:2}"
+
+-- You can use [] to specify 'subsequences', each will take up the
+-- space of a step:
+
+d1 $ sound "[bd sn:5] [ht sn:2 cp]"
+
+-- Chopping into bits
+
+d1 $ sound "arpy"
+
+d1 $ chop 4 (sound "arpy")
+
+-- Chop makes a pattern of bits of sound, that you can transform again
+
+d1 $ rev $ chop 4 (sound "arpy")
+
+-- Compare chop and striate:
+
+d1 $ chop 4 (sound "arpy arpy:1")
+
+d1 $ striate 4 (sound "arpy arpy:1")
+
+-- Use * to speed up, and / to slow down steps
+
+d1 $ sound "bd*4 bd*2"
+
+d1 $ sound "bd cp/2"
+
+d1 $ sound "bd [sn:2 cp]/2"
+
+-- Use <> to play one substep per cycle
+
+d1 $ sound "bd mt*2 bd <arpy:1 arpy:2 arpy:3>"
+
+-- You can pattern effects as well
+
+d1 $ sound "bd*8"
+  # pan "0 1"
+
+d1 $ sound "bd*8"
+  # room "0 0.6 0.9"
+  # size "0 0.4 0.9"
+
+d1 $ sound "bd*8"
+  # vowel "a e i"
+
+-- Put the effect first if you want it to control the 'structure' of
+-- the pattern
+
+d1 $ vowel "x e [i o] u" # sound "bd"
+
+-- For patterns of single numbers, you can miss off the quotes
+
+d1 $ sound "bd bd"
+  # pan 1
+
+-- The heart of all live coding rigged demos.. The Amen Break
+
+d1 $ n "0 1 2 3" # sound "amencutup"
+  
+-- Shorthand for a run of integers is ..:
+
+d1 $ n "0 .. 3" # sound "amencutup"
+
+d1 $ iter 4 $ slow 2 $ n "0 .. 15" # sound "amencutup"
+
+d1 $ every 4 (slow 2 . (|*| speed 0.5)) $ jux rev $ iter 4 $ slow 2 $ n "0 .. 15" # sound "amencutup"
+
+-- Wait, what is that iter doing? Shifting the pattern every cycle
+
+d1 $ slow 2 $ n "0 .. 3" # sound "alphabet"
+
+d1 $ slow 2 $ iter 4 $ n "0 .. 3" # sound "alphabet"
+
+1: a b c d
+2: b c d a
+3: c d a b
+4: d a b c
+5: a b c d
+6: ...
+
+-- And the jux? Runs a function (in this case rev) only in one speaker!
+
+d1 $ slow 4 $ n "0 .. 3" # sound "numbers"
+
+d1 $ slow 4 $ jux rev $ n "0 .. 3" # sound "numbers"
+
+-- Apply a function every x cycles
+
+d1 $ every 4 rev $ n "0 .. 3" # sound "alphabet"
+  # speed 2
+
+

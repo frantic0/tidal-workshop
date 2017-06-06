@@ -93,3 +93,6 @@ d1 $ sound "bd bd"
 
 d1 $ n "0 1 2 3" # sound "amencutup"
   
+-- Shorthand for a run of integers is ..:
+
+d1 $ n "0 .. 3" # sound "amencutup"

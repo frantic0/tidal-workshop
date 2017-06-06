@@ -55,6 +55,14 @@ d1 $ chop 4 (sound "arpy arpy:1")
 
 d1 $ striate 4 (sound "arpy arpy:1")
 
+-- Use * to speed up, and / to slow down steps
+
+d1 $ sound "bd*4 bd*2"
+
+d1 $ sound "bd cp/2"
+
+d1 $ sound "bd [sn:2 cp]/2"
+
 -- You can pattern effects as well
 
 d1 $ sound "bd*8"

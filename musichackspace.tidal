@@ -96,3 +96,6 @@ d1 $ n "0 1 2 3" # sound "amencutup"
 -- Shorthand for a run of integers is ..:
 
 d1 $ n "0 .. 3" # sound "amencutup"
+
+d1 $ jux rev $ iter 4 $ slow 2 $ n "0 .. 15" # sound "amencutup"
+

@@ -120,3 +120,4 @@ d1 $ slow 4 $ n "0 .. 3" # sound "numbers"
 
 d1 $ slow 4 $ jux rev $ n "0 .. 3" # sound "numbers"
 
+-- Apply a function every x cycles

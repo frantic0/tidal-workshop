@@ -252,3 +252,7 @@ d1 $ off 0.125 (# (sound "supersaw" # crush 3))
   # size 0.4
   |+| n "<0 0 -12 -24>"
   # gain 0.6
+
+-- Notes on syntax
+
+$ - takes the code on the right, turns it into a pattern, and pass it to the function on the left

@@ -150,9 +150,12 @@ d1 $ someCycles (# crush 3) $ n "0 .. 7" # sound "feel"
 d1 $ sometimes (# crush 3) $ n "0 .. 7" # sound "feel"
   # speed 2
 
-d1 $ randcat [sound "bd", sound "cp"]
+-- With (x,y), evenly distribute x events over y steps
+-- (seehttps://tidalcycles.org/patterns.html#bjorklund
 
-discretise 16 $ irand 1
+d1 $ sound "feel(3,8)"
+
+
 
 
 

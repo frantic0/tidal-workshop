@@ -157,6 +157,14 @@ d1 $ sound "feel(3,8)"
 
 d1 $ slow 3 $ sound "feel(3,8) feel:2(5,8) [feel(3,8), feel:2(5,8)]"
 
--- Arpeggios! Offset a transforma
+-- Synthesis! You can use note names instead of numbers
 
-d1 $ sound "superpiano"
+d1 $ slow 4 $ n "f,8) e c a" # sound "superpiano"
+  # legato 3
+
+-- Arpeggios! Offset a transformation and put it on top of the original
+
+
+d1 $ slow 4 $ n "f(3,8) e c a" # sound "superpiano"
+  # legato 3
+  

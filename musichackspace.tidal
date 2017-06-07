@@ -70,6 +70,8 @@ d1 $ striate 4 (sound "arpy arpy:1")
 
 d1 $ chop "<4 8 2>" (sound "arpy arpy:1")
 
+d1 $ fast "2 1.5" $ sound "feel drum ~ feel:2"
+
 -- Use * to speed up, and / to slow down steps
 
 d1 $ sound "bd*4 bd*2"

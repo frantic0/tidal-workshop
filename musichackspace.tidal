@@ -35,7 +35,7 @@ d1 $ sound "bd [sn:1 sn:3] ht:4"
 
 d1 $ sound "[bd sn:1 ht:4, arpy arpy:2 arpy:5]"
 
--- They don't have to be the same length
+-- They don't have to be the same length, Tidal works it out for you
 
 d1 $ sound "[bd sn:1 ht:4, arpy arpy:2]"
 

@@ -91,7 +91,7 @@ d1 $ sound "bd*8"
   # vowel "a e i"
 
 -- careful with filters, high numbers can make very loud noise! Keep
--- your volume low when experimenting
+-- your system volume low when experimenting
 d1 $ sound "bd*8"
   # lpf 2000
   # lpq 0.1

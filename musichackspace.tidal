@@ -155,6 +155,8 @@ d1 $ sometimes (# crush 3) $ n "0 .. 7" # sound "feel"
 
 d1 $ sound "feel(3,8)"
 
+d1 $ slow 3 $ sound "feel(3,8) feel:2(5,8) [feel(3,8), feel:2(5,8)]"
+
 
 
 

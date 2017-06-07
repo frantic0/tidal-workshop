@@ -294,6 +294,9 @@ d1 $ pan "0 1" # sound "bd"
 |*| - same as |+|, but instead of adding, values get multiplied
 
 
-d1 $ sound "bd*4" # pan saw
+d1 $ slow 4 $ sound "newnotes*4" # pan saw
+  # gain 0.8
+  # speed 4
+  
 
 hush

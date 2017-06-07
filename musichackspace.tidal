@@ -203,7 +203,7 @@ d1 $ slow 4 $ n "f(3,8) e c a" # sound "superpiano"
 
 -- Arpeggios! Offset a transformation and put it on top of the original
 
-d1 $ slow 4 $ "f(3,8) e c a") # sound "supermandolin"
+d1 $ slow 4 $ n "f(3,8) e c a" # sound "supermandolin"
   # legato 3
 
 d1 $ slow 4 $ n (off 0.25 (+7) $ slow 2 "f(3,8) e c a") # sound "supermandolin"

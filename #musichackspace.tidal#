@@ -226,10 +226,10 @@ d1 $ jux rev $ slow 4 $ n (off 0.125 (+12) $
   # gain 0.6
 
 
-d1 $ jux rev $ slow 4 $ n (off 0.125 (+12) $
+d1 $ off 0.25 (# (sound "superpiano" # legato 8 # gain 0.9 # crush 3))
+  $ jux rev $ slow 4 $ n (off 0.125 (+12) $
                            off 0.25 (+7) $
                            slow 2 "f(3,8) a(3,8,2) c*2 e(3,8)") # sound "superzow"
-  # legato 2
   # hpf (slow 4 $ scale 200 2000 sine)
   # hpq 0.2
   # room 0.6

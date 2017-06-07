@@ -122,6 +122,12 @@ d1 $ vowel "x e [i o] u" # sound "bd"
 d1 $ sound "bd bd"
   # pan 1
 
+-- Instead of using : to pick a sample, you can use a separate parameter, like an effect
+
+d1 $ n "0 [~ 2] 1 2" # sound "arpy"
+
+d1 $ sound "arpy:0 [~ arpy:2] arpy:1 arpy:2" -- easier than this
+
 -- The heart of all live coding rigged demos.. The Amen Break
 
 d1 $ n "0 1 2 3" # sound "amencutup"

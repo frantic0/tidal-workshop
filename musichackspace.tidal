@@ -255,4 +255,10 @@ d1 $ off 0.125 (# (sound "supersaw" # crush 3))
 
 -- Notes on syntax
 
-$ - takes the code on the right, turns it into a pattern, and pass it to the function on the left
+$ - takes the code on the right, turns it into a pattern (or something), and pass it to the function on the left
+
+# - takes a sound or effect pattern on the right, and combines it with the pattern on the left
+
+|+| - the same as #, but if the same numerical pattern is on both the right and the left, they get added together
+
+|*| - same as |+|, but instead of adding, values get multiplied

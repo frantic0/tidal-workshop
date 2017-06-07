@@ -18,7 +18,7 @@ d1 $ sound "drum:2"
 
 d1 $ sound "bd sn:1"
 
--- Longer sequences
+-- Longer sequences. It goes faster!
 
 d1 $ sound "bd sn:1 ht:4"
 

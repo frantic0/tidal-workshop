@@ -262,8 +262,8 @@ $ - takes the code on the right, turns it into a pattern (or something), and pas
 d1 $ every 3 rev sound "bd sn:1"
 
 -- this will work, because tidal will turn (sound "bd sn:1") into a
--- pattern before giving it to every. This is the same as parenthesis
--- in arithmetic
+-- pattern before giving it to every. This works the same way as
+-- parenthesis in arithmetic
 d1 $ every 3 rev (sound "bd sn:1")
 
 -- this does the same thing, but using $. Handy because you don't have

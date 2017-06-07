@@ -110,6 +110,7 @@ d1 $ sound "bd*8"
 d1 $ sound "bd*8"
   # lpf (scale 500 5000 saw)
   # lpq 0.2
+  # pan sine
 
 -- Put the effect first if you want it to control the 'structure' of
 -- the pattern

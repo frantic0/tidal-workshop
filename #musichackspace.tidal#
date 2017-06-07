@@ -152,4 +152,7 @@ d1 $ sometimes (# crush 3) $ n "0 .. 7" # sound "feel"
 
 d1 $ randcat [sound "bd", sound "cp"]
 
-hush
+discretise 16 $ irand 1
+
+
+

@@ -257,6 +257,19 @@ d1 $ off 0.125 (# (sound "supersaw" # crush 3))
 
 $ - takes the code on the right, turns it into a pattern (or something), and pass it to the function on the left
 
+-- this doesn't work, because 'every' will try to apply 'rev' to
+-- 'sound', and get confused.
+d1 $ every 3 rev sound "bd sn:1"
+
+-- this will work, because tidal will turn (sound "bd sn:1") into a
+-- pattern before giving it to every. This is the same as parenthesis
+-- in arithmetic
+d1 $ every 3 rev (sound "bd sn:1")
+
+-- this does the same thing, but using $. Handy because you don't have
+-- to keep track of opening and closing brackets.
+d1 $ every 3 rev $ sound "bd sn:1"
+
 # - takes a sound or effect pattern on the right, and combines it with the pattern on the left
 
 |+| - the same as #, but if the same numerical pattern is on both the right and the left, they get added together

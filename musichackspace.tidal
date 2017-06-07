@@ -23,15 +23,19 @@ d1 $ sound "bd sn:1"
 
 d1 $ sound "bd sn:1 ht:4"
 
+d1 $ sound "bd sn:1 ht:4 bd sn"
+
+d1 $ sound "bd sn:1 ht:4 bd sn sn:2 sn:5"
+
 -- Use ~ for a rest/gap
 
 d1 $ sound "bd sn:1 ~ ht:4 ~ bd sn:1 bd"
 
--- Subsequences
+-- Subsequences with []
 
 d1 $ sound "bd [sn:1 sn:3] ht:4"
 
--- Play two sequences at the same time
+-- Play two sequences at the same time with [,]
 
 d1 $ sound "[bd sn:1 ht:4, arpy arpy:2 arpy:5]"
 
@@ -69,7 +73,6 @@ d1 $ striate 4 (sound "arpy arpy:1")
 -- Many function parameters can be given as patterns
 
 d1 $ chop "<4 8 2>" (sound "arpy arpy:1")
-
 
 d1 $ sound "feel drum ~ feel:2"
 
@@ -272,8 +275,7 @@ d1 $ every 3 rev $ sound "bd sn:1"
 
 # - takes a sound or effect pattern on the right, and combines it with the pattern on the left
 
-d1 $ sound "bd bd bd bd"
-  # vowel "a e i"
+d1 $ pan "0 1" # sound "bd"
 
 |+| - the same as #, but if the same numerical pattern is on both the right and the left, they get added together
 

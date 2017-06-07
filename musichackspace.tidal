@@ -43,6 +43,8 @@ d1 $ sound "[bd sn:1 ht:4, arpy arpy:2]"
 
 d1 $ sound "{bd sn:1 ht:4, arpy arpy:2}"
 
+d1 $ sound "{bd sn:1 ht:4, arpy [arpy:2 arpy:3]}"
+
 -- You can use [] to specify 'subsequences', each will take up the
 -- space of a step:
 

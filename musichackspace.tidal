@@ -90,6 +90,10 @@ d1 $ sound "bd*8"
 d1 $ sound "bd*8"
   # vowel "a e i"
 
+d1 $ sound "bd*8"
+  # lpf 2000
+  # lpq 0.1 -- careful with this parameter, high numbers = very loud noise!
+
 -- Put the effect first if you want it to control the 'structure' of
 -- the pattern
 

@@ -76,7 +76,7 @@ d1 $ sound "bd [sn:2 cp]/2"
 
 -- Use <> to play one substep per cycle
 
-d1 $ sound "bd mt*2 bd <arpy:1 arpy:2 arpy:3>"
+d1 $ sound "bd mt*2 bd <arpy:1 arpy:2 arpy:3*2 arpy:4>"
 
 -- You can pattern effects as well
 

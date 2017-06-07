@@ -127,6 +127,10 @@ d1 $ slow 4 $ jux rev $ n "0 .. 3" # sound "numbers"
 d1 $ every 4 rev $ n "0 .. 3" # sound "alphabet"
   # speed 2
 
+
+d1 $ every 4 (0.25 <~) $ n "0 .. 3" # sound "alphabet"
+  # speed 2
+
 -- Different ways of randomising
 
 d1 $ sound "feel ~ feel*2"
@@ -139,3 +143,9 @@ d1 $ sound "feel ~ feel:2*2"
 d1 $ sound "feel ~ feel? [feel feel:2?]"
 
 d1 $ someCycles (0.25 <~) $ n "0 .. 7" # sound "feel"
+
+d1 $ someCycles (# crush 3) $ n "0 .. 7" # sound "feel"
+  # speed 2
+
+d1 $ sometimes (# crush 3) $ n "0 .. 7" # sound "feel"
+

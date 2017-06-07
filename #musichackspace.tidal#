@@ -1,0 +1,271 @@
+-- Play a drum sound
+
+d1 $ sound "drum"
+
+-- Replace that sound with silence
+
+d1 $ silence
+
+-- Pick a different drum sound with :
+
+d1 $ sound "drum:2"
+
+-- (you can find these samples and add to them in your Dirt-Samples
+-- folder. In supercollider, File > Open user support directory >
+-- downloaded-quarks will get you there)
+
+-- Sequences
+
+d1 $ sound "bd sn:1"
+
+-- Longer sequences. It goes faster! Shows that Tidal has a 'flexible'
+-- idea of what a beat is.
+
+d1 $ sound "bd sn:1 ht:4"
+
+-- Use ~ for a rest/gap
+
+d1 $ sound "bd sn:1 ~ ht:4 ~ bd sn:1 bd"
+
+-- Subsequences
+
+d1 $ sound "bd [sn:1 sn:3] ht:4"
+
+-- Play two sequences at the same time
+
+d1 $ sound "[bd sn:1 ht:4, arpy arpy:2 arpy:5]"
+
+-- They don't have to be the same length, Tidal works it out for you
+
+d1 $ sound "[bd sn:1 ht:4, arpy arpy:2]"
+
+-- Use {} rather than [] to align the steps rather than the cycles:
+
+d1 $ sound "{bd sn:1 ht:4, arpy arpy:2}"
+
+d1 $ sound "{bd sn:1 ht:4, arpy [arpy:2 arpy:3]}"
+
+-- You can use [] to specify 'subsequences', each will take up the
+-- space of a step:
+
+d1 $ sound "[bd sn:5] [ht sn:2 cp]"
+
+-- Chopping into bits
+
+d1 $ sound "arpy"
+
+d1 $ chop 4 (sound "arpy")
+
+-- Chop makes a pattern of bits of sound, that you can transform again
+
+d1 $ rev $ chop 4 (sound "arpy")
+
+-- Compare chop and striate:
+
+d1 $ chop 4 (sound "arpy arpy:1")
+
+d1 $ striate 4 (sound "arpy arpy:1")
+
+-- Many function parameters can be given as patterns
+
+d1 $ chop "<4 8 2>" (sound "arpy arpy:1")
+
+
+d1 $ sound "feel drum ~ feel:2"
+
+d1 $ fast 2 $ sound "feel drum ~ feel:2"
+
+d1 $ fast "2 1.5" $ sound "feel drum ~ feel:2"
+
+d1 $ fast "<2 1.5>" $ sound "feel drum ~ feel:2"
+
+-- Use * to speed up, and / to slow down steps
+
+d1 $ sound "bd*4 bd*2"
+
+d1 $ sound "bd cp/2"
+
+d1 $ sound "bd [sn:2 cp]/2"
+
+-- Use <> to play one substep per cycle
+
+d1 $ sound "bd mt*2 bd <arpy:1 arpy:2 arpy:3*2 arpy:4>"
+
+-- You can pattern effects as well
+
+d1 $ sound "bd*8"
+  # pan "0 1"
+
+d1 $ sound "bd*8"
+  # room "0 0.6 0.9"
+  # size "0 0.2 0.9"
+
+d1 $ sound "bd*8"
+  # vowel "a e i"
+
+-- careful with filters, high numbers can make very loud noise! Keep
+-- your system volume low when experimenting
+
+d1 $ sound "bd*8"
+  # lpf 2000
+  # lpq 0.1
+
+-- continuous patterns!
+
+d1 $ sound "bd*8"
+  # lpf (scale 500 5000 sine)
+  # lpq 0.2
+
+d1 $ sound "bd*8"
+  # lpf (scale 500 5000 tri)
+  # lpq 0.2
+
+d1 $ sound "bd*8"
+  # lpf (scale 500 5000 saw)
+  # lpq 0.2
+  # pan sine
+
+-- Put the effect in front of the sound if you want it to control the
+-- 'structure' of the pattern
+
+d1 $ vowel "x e [i o] u" # sound "bd"
+
+-- For patterns of single numbers, you can miss off the quotes
+
+d1 $ sound "bd bd"
+  # pan 1
+
+-- Instead of using : to pick a sample, you can use a separate synth
+-- parameter called 'n'
+
+d1 $ n "0 [~ 2] 1 2" # sound "arpy"
+
+d1 $ sound "arpy:0 [~ arpy:2] arpy:1 arpy:2" -- easier than this
+
+-- The heart of all live coding rigged demos.. The Amen Break
+
+d1 $ n "0 1 2 3" # sound "amencutup"
+  
+-- Shorthand for a run of integers is ..:
+
+d1 $ n "0 .. 3" # sound "amencutup"
+
+d1 $ iter 4 $ slow 2 $ n "0 .. 15" # sound "amencutup"
+
+d1 $ every 4 (slow 2 . (|*| speed 0.5)) $ jux rev $ iter 4 $ slow 2 $ n "0 .. 15" # sound "amencutup"
+
+-- Wait, what is that iter doing? Shifting the pattern every cycle
+
+d1 $ slow 2 $ n "0 .. 3" # sound "alphabet"
+
+d1 $ slow 2 $ iter 4 $ n "0 .. 3" # sound "alphabet"
+
+1: a b c d
+2: b c d a
+3: c d a b
+4: d a b c
+5: a b c d
+6: ...
+
+-- And the jux? Runs a function (in this case rev) only in one speaker!
+
+d1 $ slow 4 $ n "0 .. 3" # sound "numbers"
+
+d1 $ slow 4 $ jux rev $ n "0 .. 3" # sound "numbers"
+
+-- Many p
+
+-- Apply a function every x cycles
+
+d1 $ every 4 rev $ n "0 .. 3" # sound "alphabet"
+  # speed 2
+
+
+d1 $ every 4 (0.25 <~) $ n "0 .. 3" # sound "alphabet"
+  # speed 2
+
+-- Different ways of randomising
+
+d1 $ sound "feel ~ feel*2"
+  # n (irand 8)
+
+d1 $ sound "feel ~ feel:2*2"
+  # speed (scale 1 4 rand)
+  # pan rand
+
+d1 $ sound "feel ~ feel? [feel feel:2?]"
+
+d1 $ someCycles (0.25 <~) $ n "0 .. 7" # sound "feel"
+
+d1 $ someCycles (# crush 3) $ n "0 .. 7" # sound "feel"
+  # speed 2
+
+d1 $ sometimes (# crush 3) $ n "0 .. 7" # sound "feel"
+  # speed 2
+
+-- With (x,y), evenly distribute x events over y steps
+-- ( see https://tidalcycles.org/patterns.html#bjorklund )
+
+d1 $ sound "feel(3,8)"
+
+d1 $ slow 3 $ sound "feel(3,8) feel:2(5,8) [feel(3,8), feel:2(5,8)]"
+
+-- Synthesis! You can use note names instead of numbers
+
+d1 $ slow 4 $ n "f(3,8) e c a" # sound "superpiano"
+
+d1 $ slow 4 $ n "f(3,8) e c a" # sound "superpiano"
+  # legato 3
+
+-- Arpeggios! Offset a transformation and put it on top of the original
+
+d1 $ slow 4 $ n "f(3,8) e c a" # sound "supermandolin"
+  # legato 3
+
+d1 $ slow 4 $ n (off 0.25 (+7) $ slow 2 "f(3,8) e c a") # sound "supermandolin"
+  # legato 3
+
+d1 $ slow 4 $ n (off 0.125 (+12) $
+                 off 0.25 (+7) $
+                 slow 2 "f(3,8) e(3,8,2) c*2 a(3,8)") # sound "supermandolin"
+  # legato 3
+
+d1 $ jux rev $ slow 4 $ n (off 0.125 (+12) $
+                           off 0.25 (+7) $
+                           slow 2 "f(3,8) a(3,8,2) c*2 e(3,8)") # sound "superzow"
+  # legato 2
+  # hpf (slow 4 $ scale 200 2000 sine)
+  # hpq 0.2
+  # room 0.6
+  # size 0.4
+  |+| n "<0 0 -12 -24>"
+  # gain 0.6
+
+
+d1 $ off 0.125 (# (sound "supersaw" # crush 3))
+  $ jux rev $ slow 4 $ n (off 0.125 (+12) $
+                           off 0.25 (+7) $
+                           slow 2 "f(3,8) a(3,8,2) c*2 e(3,8)") # sound "superzow"
+  # hpf (slow 4 $ scale 200 2000 sine)
+  # hpq 0.2
+  # room 0.6
+  # size 0.4
+  |+| n "<0 0 -12 -24>"
+  # gain 0.6
+
+-- Notes on syntax
+
+$ - takes the code on the right, turns it into a pattern (or something), and pass it to the function on the left
+
+-- this doesn't work, because 'every' will try to apply 'rev' to
+-- 'sound', and get confused, because that 
+d1 $ every 3 rev sound "bd sn:1"
+
+-- this will work, because tidal will turn 
+d1 $ every 3 rev (sound "bd sn:1")
+
+# - takes a sound or effect pattern on the right, and combines it with the pattern on the left
+
+|+| - the same as #, but if the same numerical pattern is on both the right and the left, they get added together
+
+|*| - same as |+|, but instead of adding, values get multiplied

@@ -138,3 +138,4 @@ d1 $ sound "feel ~ feel:2*2"
 
 d1 $ sound "feel ~ feel? [feel feel:2?]"
 
+d1 $ someCycles (0.25 <~) $ n "0 .. 7" # sound "feel"

@@ -127,4 +127,8 @@ d1 $ slow 4 $ jux rev $ n "0 .. 3" # sound "numbers"
 d1 $ every 4 rev $ n "0 .. 3" # sound "alphabet"
   # speed 2
 
+-- Different ways of randomising
+
+d1 $ sound "feel ~ feel*2"
+  # n (irand 8)
 

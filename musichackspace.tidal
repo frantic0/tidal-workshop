@@ -122,7 +122,9 @@ d1 $ vowel "x e [i o] u" # sound "bd"
 d1 $ sound "bd bd"
   # pan 1
 
--- Instead of using : to pick a sample, you can use a separate parameter, like an effect
+-- Instead of using : to pick a sample, you can use a separate synth
+-- parameter called 'n'
+
 
 d1 $ n "0 [~ 2] 1 2" # sound "arpy"
 
@@ -158,6 +160,8 @@ d1 $ slow 2 $ iter 4 $ n "0 .. 3" # sound "alphabet"
 d1 $ slow 4 $ n "0 .. 3" # sound "numbers"
 
 d1 $ slow 4 $ jux rev $ n "0 .. 3" # sound "numbers"
+
+-- Many p
 
 -- Apply a function every x cycles
 

@@ -18,7 +18,12 @@ d1 $ sound "drum:2"
 
 d1 $ sound "bd sn:1"
 
--- Longer sequences. It goes faster!
+-- Longer sequences. It goes faster! Shows that Tidal has a 'flexible'
+-- idea of what a beat is.
+
+d1 $ sound "bd sn:1 ht:4"
+
+-- Use ~ for a rest/gap
 
 d1 $ sound "bd sn:1 ht:4"
 

@@ -292,3 +292,8 @@ d1 $ pan "0 1" # sound "bd"
 |+| - the same as #, but if the same numerical pattern is on both the right and the left, they get added together
 
 |*| - same as |+|, but instead of adding, values get multiplied
+
+
+d1 $ sound "bd*4" # pan saw
+
+hush

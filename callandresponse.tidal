@@ -632,5 +632,11 @@ d2 $ jux rev $ weave 16 (n "0 .. 7" # sound "arpy")
     ]
 
 d3 $ jux rev $ smash 4 [1,0.5,3,4] $ brak $ sound "bd*3 [bd*4 bd*8]"
+   # speed "1 2 3"
+
+d1 $ slowspread (density) [2,3,4] $ sound "bd sn:2"
+
+d1 $ fast "<2 [3 8] 4>" $ sound "bd sn:2"
+
 
 d3 silence

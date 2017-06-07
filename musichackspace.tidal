@@ -1,3 +1,6 @@
+Wifi: Somerset Studios, pass: MadeHere
+This worksheet: https://github.com/yaxu/tidal-workshop
+
 -- Play a drum sound
 
 d1 $ sound "drum"
@@ -160,7 +163,7 @@ d1 $ sound "arpy:0 [~ arpy:2] arpy:1 arpy:2" -- easier than this
 -- The heart of all live coding rigged demos.. The Amen Break
 
 d1 $ n "0 1 2 3" # sound "amencutup"
-  
+
 -- Shorthand for a run of integers is ..:
 
 d1 $ n "0 .. 3" # sound "amencutup"
@@ -297,6 +300,3 @@ d1 $ pan "0 1" # sound "bd"
 d1 $ slow 4 $ sound "newnotes*16" # pan saw
   # gain 0.8
   # speed 4
-  
-
-

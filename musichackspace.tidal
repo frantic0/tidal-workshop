@@ -112,8 +112,8 @@ d1 $ sound "bd*8"
   # lpq 0.2
   # pan sine
 
--- Put the effect first if you want it to control the 'structure' of
--- the pattern
+-- Put the effect in front of the sound if you want it to control the
+-- 'structure' of the pattern
 
 d1 $ vowel "x e [i o] u" # sound "bd"
 

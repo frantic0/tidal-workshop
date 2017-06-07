@@ -215,8 +215,8 @@ d1 $ jux rev $ slow 4 $ n (off 0.125 (+12) $
                            off 0.25 (+7) $
                            slow 2 "f(3,8) a(3,8,2) c*2 e(3,8)") # sound "superpiano"
   # legato 3
-  # lpf (slow 4 $ scale 1000 4000 sine)
-  # lpq 0.1
+  # hpf (slow 4 $ scale 200 2000 sine)
+  # hpq 0.2
   # room 0.6
   # size 0.4
   |+| n "<0 0 -12 -24>"

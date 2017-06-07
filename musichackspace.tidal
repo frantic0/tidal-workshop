@@ -25,7 +25,7 @@ d1 $ sound "bd sn:1 ht:4"
 
 -- Use ~ for a rest/gap
 
-d1 $ sound "bd sn:1 ht:4"
+d1 $ sound "bd sn:1 ~ ht:4"
 
 -- Subsequences
 

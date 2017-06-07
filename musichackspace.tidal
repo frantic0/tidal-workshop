@@ -92,13 +92,14 @@ d1 $ sound "bd*8"
 
 -- careful with filters, high numbers can make very loud noise! Keep
 -- your system volume low when experimenting
+
 d1 $ sound "bd*8"
   # lpf 2000
   # lpq 0.1
 
 d1 $ sound "bd*8"
-  # lpf 2000
-  # lpq 0.2 -- careful with this parameter, high numbers = very loud noise!
+  # lpf (scale 500 5000 sine)
+  # lpq 0.2
 
 -- Put the effect first if you want it to control the 'structure' of
 -- the pattern

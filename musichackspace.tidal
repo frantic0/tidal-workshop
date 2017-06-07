@@ -125,7 +125,6 @@ d1 $ sound "bd bd"
 -- Instead of using : to pick a sample, you can use a separate synth
 -- parameter called 'n'
 
-
 d1 $ n "0 [~ 2] 1 2" # sound "arpy"
 
 d1 $ sound "arpy:0 [~ arpy:2] arpy:1 arpy:2" -- easier than this

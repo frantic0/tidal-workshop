@@ -66,6 +66,10 @@ d1 $ chop 4 (sound "arpy arpy:1")
 
 d1 $ striate 4 (sound "arpy arpy:1")
 
+-- Many function parameters can be given as patterns
+
+d1 $ chop "<4 8 2>" (sound "arpy arpy:1")
+
 -- Use * to speed up, and / to slow down steps
 
 d1 $ sound "bd*4 bd*2"

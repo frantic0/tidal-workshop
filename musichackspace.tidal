@@ -148,4 +148,13 @@ d1 $ someCycles (# crush 3) $ n "0 .. 7" # sound "feel"
   # speed 2
 
 d1 $ sometimes (# crush 3) $ n "0 .. 7" # sound "feel"
+  # speed 2
+
+-- With (x,y), evenly distribute x events over y steps
+-- ( see https://tidalcycles.org/patterns.html#bjorklund )
+
+d1 $ sound "feel(3,8)"
+
+
+
 

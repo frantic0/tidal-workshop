@@ -10,7 +10,9 @@ d1 $ silence
 
 d1 $ sound "drum:2"
 
--- (you can find these samples and add to them in your Dirt-Samples folder)
+-- (you can find these samples and add to them in your Dirt-Samples
+-- folder. In supercollider, File > Open user support directory >
+-- downloaded-quarks will get you there)
 
 -- Sequences
 
